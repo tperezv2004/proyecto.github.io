@@ -1,0 +1,22 @@
+body {
+    position: relative; /* Necesario para el posicionamiento absoluto de las imágenes */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+img {
+    cursor: pointer;
+    max-width: 100px; /* Ajusta el tamaño según necesites */
+    height: auto;
+    position: relative; /* Cambiado a posición absoluta */
+}
+
+
+.mapa {
+    max-width: 1000px; /* Ancho de la imagen */
+    height: auto;
+}
+
