@@ -1,14 +1,16 @@
-pagina: http://127.0.0.1:5500/index.html
-
-
 cosas por hacer:
 
 1. Descargar todas las tablas csv
 
-2. Mandar formularop
+2. Descargar todo los logos de los equipos
 
 3. Escribir informe
 
-4. Descargar todo los logos de los equipos
+4. Titulo
 
-5. Mover mapa y logos 
+
+IDEAS
+
+1. Fondo celeste? -> cambiar mapa a trasnparente
+
+

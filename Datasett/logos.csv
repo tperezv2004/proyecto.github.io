@@ -1,2 +1,4 @@
-ruta,mensaje,x,y
-imagenes\logos\bucks.png,bucks, 0,-450
+ruta,mensaje,x,y,width,height
+imagenes\logos\celtics.png,celtics,115,110,80,80
+imagenes\logos\bucks.png,bucks,-200,90,85,75
+imagenes\logos\warrios.png,warriors,-680,220,80,50

@@ -1,22 +1,27 @@
 body {
-    position: relative; /* Necesario para el posicionamiento absoluto de las imágenes */
+    position: relative; 
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
 }
+.mapa {
+    position: relative; /* Cambiado a posición relativa */
+    max-width: 500px; /* Mantén este valor si deseas un máximo */
+    height: auto; /* Mantener la proporción de la imagen */
+    transform: scale(1.9); /* Escalar al 120% de su tamaño original */
+    margin-left: 250px; /* Ajusta este valor según necesites */
+    margin-top: 50px; /* Ajusta este valor según necesites */
+}
+
+#imagenesContainer {
+    position: relative; /* Para que las imágenes se posicionen correctamente dentro de este contenedor */
+    width: 100%; /* Ajusta según el ancho deseado */
+    height: auto; /* O establece un valor fijo si lo prefieres */
+}
+
 
 img {
-    cursor: pointer;
+    position: relative; /* Cambiado a posición relativa */
     max-width: 100px; /* Ajusta el tamaño según necesites */
     height: auto;
-    position: relative; /* Cambiado a posición absoluta */
-}
-
-
-.mapa {
-    max-width: 1000px; /* Ancho de la imagen */
-    height: auto;
+    cursor: pointer;
 }
 

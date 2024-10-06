@@ -1,0 +1,45 @@
+Equipos NBA Conferencia Este
+
+División Atlántico
+Boston Celtics
+New Jersey Nets
+New York Knicks
+Philadelphia 76ers
+Toronto Raptors
+
+División Central
+Chicago Bulls
+Cleveland Cavaliers
+Detroit Pistons
+Indiana Pacers
+Milwaukee Bucks // LISTO
+
+División Sureste
+Atlanta Hawks
+Charlotte Hornets
+Miami Heat
+Orlando Magic
+Washington Wizards
+
+
+Equipos NBA Conferencia Oeste
+División Noroeste
+Denver Nuggets
+Minnesota Timberwolves
+Oklahoma City Thunder
+Portland Trail Blazers
+Utah Jazz
+
+División División Pacífico
+Golden State Warriors // LISTO
+Los Angeles Clippers
+Los Angeles Lakers
+Phoenix Suns
+Sacramento Kings
+
+División Suroeste
+Dallas Mavericks
+Houston Rockets
+Memphis Grizzlies
+New Orleans Pelicans
+San Antonio Spurs
