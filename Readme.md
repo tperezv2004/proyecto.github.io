@@ -1,16 +1,22 @@
-cosas por hacer:
+COSAS POR HACER:
 
-1. Descargar todas las tablas csv
 
-2. Descargar todo los logos de los equipos
+1. Descargar todo los logos de los equipos (AL FINAL PONER EN POSICION)
 
-3. Escribir informe
+2. Escribir informe
 
-4. Titulo
+3. Cambiar mapa bajar 
+
+4. Fondo gris y un recuadro celeste que cubra el mapa
+
+5. csv equipos cambair?
 
 
 IDEAS
 
-1. Fondo celeste? -> cambiar mapa a trasnparente
 
+LOGOS: PAGINA
 
+https://www.stickpng.com/es/cat/deporte/baloncesto/equipos-nba?page=1
+
+https://loodibee.com/nba/

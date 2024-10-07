@@ -1,8 +1,8 @@
 Equipos NBA Conferencia Este
 
 División Atlántico
-Boston Celtics
-New Jersey Nets
+Boston Celtics // LISTO 
+New Jersey Nets // LISTO
 New York Knicks
 Philadelphia 76ers
 Toronto Raptors
@@ -15,7 +15,7 @@ Indiana Pacers
 Milwaukee Bucks // LISTO
 
 División Sureste
-Atlanta Hawks
+Atlanta Hawks // LISTO
 Charlotte Hornets
 Miami Heat
 Orlando Magic
@@ -33,7 +33,7 @@ Utah Jazz
 División División Pacífico
 Golden State Warriors // LISTO
 Los Angeles Clippers
-Los Angeles Lakers
+Los Angeles Lakers // LISTO
 Phoenix Suns
 Sacramento Kings
 

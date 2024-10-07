@@ -1,4 +1,7 @@
 ruta,mensaje,x,y,width,height
-imagenes\logos\celtics.png,celtics,115,110,80,80
-imagenes\logos\bucks.png,bucks,-200,90,85,75
-imagenes\logos\warrios.png,warriors,-680,220,80,50
+imagenes\logos\hawks.png,Hawks,-100,340,65,65
+imagenes\logos\celtics.png,Celtics,115,110,75,75
+imagenes\logos\nets.png,Nets,105,190,65,65
+imagenes\logos\bucks.png,Bucks,-200,90,85,75
+imagenes\logos\warrios.png,Warriors,-660,220,55,55
+imagenes\logos\lakers.png,Lakers,-300,340,60,55

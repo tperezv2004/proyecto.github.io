@@ -17,14 +17,21 @@ function procesarCSV(data) {
                     mensaje, 
                     x: parseInt(x), 
                     y: parseInt(y), 
-                    width: width ? parseInt(width) : null, // Si hay width en el CSV, úsalo, de lo contrario null
-                    height: height ? parseInt(height) : null // Si hay height en el CSV, úsalo, de lo contrario null
+                    width: parseInt(width), 
+                    height: parseInt(height) 
                 });
             }
         }
     });
 
     return imagenes;
+}
+
+// funcion que cuenta
+function contar(){
+    for (let i = 1; i <= 10; i++) {
+        console.log(i);
+    }
 }
 
 
@@ -36,16 +43,12 @@ function crearImagenes(imagenes) {
         imgElement.src = imagen.ruta;
         imgElement.alt = imagen.mensaje;
         imgElement.style.position = 'absolute';
+
         imgElement.style.left = `${imagen.x}px`; // posición x
         imgElement.style.top = `${imagen.y}px`;  // posición y
 
-        // Si hay un valor para width o height, aplícalo
-        if (imagen.width) {
-            imgElement.style.width = `${imagen.width}px`;
-        }
-        if (imagen.height) {
-            imgElement.style.height = `${imagen.height}px`;
-        }
+        imgElement.style.width = `${imagen.width}px`;
+        imgElement.style.height = `${imagen.height}px`;
 
         imgElement.addEventListener('click', () => console.log(imagen.mensaje));
         container.appendChild(imgElement);
