@@ -3,8 +3,8 @@ Equipos NBA Conferencia Este
 División Atlántico
 Boston Celtics // LISTO 
 New Jersey Nets // LISTO
-New York Knicks
-Philadelphia 76ers
+New York Knicks // LISTO
+Philadelphia 76ers // LISTO
 Toronto Raptors
 
 División Central

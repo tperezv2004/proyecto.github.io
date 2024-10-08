@@ -27,14 +27,6 @@ function procesarCSV(data) {
     return imagenes;
 }
 
-// funcion que cuenta
-function contar(){
-    for (let i = 1; i <= 10; i++) {
-        console.log(i);
-    }
-}
-
-
 function crearImagenes(imagenes) {
     const container = document.getElementById('imagenesContainer');
 

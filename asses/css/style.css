@@ -11,8 +11,9 @@ E6E6FA
 
 .titulo {
     position: relative;
-    left: 650px; 
-    top: 0px; 
+    top: 10px; 
+    left: 50%;  /* va con translatex */
+    transform: translateX(-50%);
     white-space: nowrap; 
 }
 
@@ -34,11 +35,12 @@ img {
     position: relative; 
     background-color: lightblue;
     height: auto; 
-    transform: scale(1.9); 
+    transform: scale(1.8); 
     max-width: 530px; 
-    margin-left: -150px; 
+    margin-left: -100px; 
     margin-top: 230px; 
     border-radius: 10px;
+    border: 2px solid black; 
 }
 
 
