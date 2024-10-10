@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Championships Pie Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        #chartContainer {
+            width: 50%;
+            max-width: 600px;
+        }
+        canvas {
+            width: 100% !important;
+            height: auto !important;
+        }
+    </style>
+</head>
+<body>
+
+<div id="chartContainer">
+    <canvas id="nbaPieChart"></canvas>
+</div>
+
+<script>
+    // Datos de ejemplo
+    const data = {
+        labels: ['Los Angeles Lakers', 'Boston Celtics', 'Chicago Bulls', 'Golden State Warriors', 'San Antonio Spurs'],
+        datasets: [{
+            data: [17, 17, 6, 7, 5], // Número de campeonatos
+            backgroundColor: [
+                '#f6a9a9', // color personalizado
+                '#f39c12',
+                '#2ecc71',
+                '#3498db',
+                '#9b59b6'
+            ],
+            hoverBackgroundColor: [
+                '#f19494', // color al pasar el mouse
+                '#e67e22',
+                '#27ae60',
+                '#2980b9',
+                '#8e44ad'
+            ]
+        }]
+    };
+
+    // Configuración del gráfico
+    const config = {
+        type: 'pie',
+        data: data,
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'NBA Championships Won by Franchise (Only Champions)'
+                }
+            }
+        },
+    };
+
+    // Inicializar el gráfico de pastel
+    const ctx = document.getElementById('nbaPieChart').getContext('2d');
+    new Chart(ctx, config);
+</script>
+
+</body>
+</html>
+

@@ -1,7 +1,13 @@
 PAGINA WEB: https://tperezv2004.github.io/proyecto.github.io/
 
 Entrega 1.
-- hacer graficos
+- hacer graficos (solo 1)
+- no usar grafico de barra (simple)
+- explicar el grafico
+- explicar porque escogimos el grafico y no otro
+grafios: 
+- grafico de lineas por puntos encestados por equipo por años
+- grafico de torta por campeonatos ganados
 
 
 COSAS POR HACER:
@@ -28,3 +34,4 @@ LOGOS: PAGINA
 1. https://www.stickpng.com/es/cat/deporte/baloncesto/equipos-nba?page=1
 
 2. https://loodibee.com/nba/
+
