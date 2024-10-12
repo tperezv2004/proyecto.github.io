@@ -19,6 +19,7 @@
 
 ## Ideas:
 1. Explicar mas el grafico (poner en eje y: "equipos" eje x: "promedio puntos")
+2. Cambiar el titulo por: Promedio de Puntos Anotados por Equipo en la temporada 23-24(Top 10)
 
 
 ## Logos:
