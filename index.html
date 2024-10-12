@@ -3,17 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="asses/css/style.css">
-    <title>Proyecto info vis</title>
+    <title>Top 10 Equipos - Promedio de Puntos</title>
+    <link rel="stylesheet" href="asses/css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script> 
 </head>
 <body>
-    <div class="titulo">
-        <h1> Teams Basketball NBA 1 </h1>
+    <div class="container">
+        <h1>Promedio de Puntos Anotados por Equipo (Top 10)</h1>
+        <canvas id="chart"></canvas>
     </div>
-   
-    <img class="mapa" src="imagenes/mapa.png" alt="Imagen">
-    <div id="imagenesContainer"></div>
 
+    <script src="app.js"></script>
     <script src="asses/js/scrip.js"></script>
+
 </body>
 </html>

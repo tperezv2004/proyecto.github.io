@@ -6,54 +6,80 @@ async function cargarCSV(url) {
 
 function procesarCSV(data) {
     const lineas = data.split('\n');
-    const imagenes = [];
+    const equipos = [];
 
     lineas.forEach((linea, index) => {
-        if (index > 0) { // Ignorar primera línea
-            const [ruta, mensaje, x, y, width, height] = linea.split(',');
-            if (ruta && mensaje && x && y) {
-                imagenes.push({ 
-                    ruta, 
-                    mensaje, 
-                    x: parseInt(x), 
-                    y: parseInt(y), 
-                    width: parseInt(width), 
-                    height: parseInt(height) 
+        if (index > 0) { // Ignorar la primera línea
+            const [equipo, PTS_por_juego] = linea.split(',');
+            if (equipo && PTS_por_juego) {
+                equipos.push({ 
+                    equipo, 
+                    PTS_por_juego: parseFloat(PTS_por_juego) 
                 });
             }
         }
     });
 
-    return imagenes;
+    return equipos;
 }
 
-function crearImagenes(imagenes) {
-    const container = document.getElementById('imagenesContainer');
+function crearGrafico(equipos) {
+    const ctx = document.getElementById('chart').getContext('2d');
 
-    imagenes.forEach(imagen => {
-        const imgElement = document.createElement('img');
-        imgElement.src = imagen.ruta;
-        imgElement.alt = imagen.mensaje;
-        imgElement.style.position = 'absolute';
+    const top10 = equipos.slice(0, 10);
 
-        imgElement.style.left = `${imagen.x}px`; // posición x
-        imgElement.style.top = `${imagen.y}px`;  // posición y
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: top10.map(item => item.equipo),
+            datasets: [{
+                label: 'Promedio de Puntos',
+                data: top10.map(item => item.PTS_por_juego),
+                backgroundColor: 'skyblue',
+                borderColor: 'blue',
+                borderWidth: 1,
+                hoverBackgroundColor: 'oeange',
+                /*
+                colores:
+                blue
+                oeange
+                */
+            }]
+        },
+        options: {
+            indexAxis: 'y',
+            scales: {
+                x: {
+                    beginAtZero: true
+                }
+            },
+            plugins: {
+                legend: { 
+                    onClick: null,
+                },
+                datalabels: { // dsp borrar ?
+                    anchor: 'end', 
+                    align: 'end',  
+                    formatter: (value, context) => {
+                        return value; 
+                    },
+                    color: 'black', 
+                },
 
-        imgElement.style.width = `${imagen.width}px`;
-        imgElement.style.height = `${imagen.height}px`;
+                tooltip: { // dsp borrar
+                    enabled: false,
+                }
+            }
 
-        imgElement.addEventListener('click', () => console.log(imagen.mensaje));
-        container.appendChild(imgElement);
+        },
+        plugins: [ChartDataLabels] 
     });
 }
 
-
-
-// Cargar el CSV y crear las imágenes
 async function init() {
-    const csvData = await cargarCSV('Datasett/logos.csv'); 
-    const imagenes = procesarCSV(csvData);
-    crearImagenes(imagenes);
+    const csvData = await cargarCSV('Datasett/EquiposTemporada23_24.csv'); 
+    const equipos = procesarCSV(csvData);
+    crearGrafico(equipos);
 }
 
 init();
