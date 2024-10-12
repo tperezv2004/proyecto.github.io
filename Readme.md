@@ -7,12 +7,13 @@
 ### Cosas por hacer:
 1. Escribir informe.
 
-### Gráficos Propuestos:
+### Gráficos Propuestos: (PODEMOS CAMBIAR DE GRAFICO)
 - **Gráfico de líneas**: Puntos encestados por equipo por años.
 - **Gráfico de torta**: Campeonatos ganados.
 - **Gráfico de barra**: Puntos encestados en una temporada. (escogemos este)
+- Podemos agregar mas graficos
 
-## Ideas:
+### Ideas:
 1. Explicar mas el grafico (poner en eje y: "equipos" eje x: "promedio puntos")
 2. Cambiar el titulo por: "Promedio de Puntos Anotados por Equipo en la temporada 23-24(Top 10)"
 
