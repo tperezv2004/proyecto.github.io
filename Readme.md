@@ -35,3 +35,10 @@ LOGOS: PAGINA
 
 2. https://loodibee.com/nba/
 
+
+DATASEST:
+
+1. https://www.kaggle.com/datasets/vivovinco/2023-2024-nba-player-stats?select=2023-2024+NBA+Player+Stats+-+Regular.csv
+
+2. https://www.basketball-reference.com/leagues/NBA_2024.html
+
