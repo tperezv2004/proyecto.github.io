@@ -14,11 +14,11 @@
 - **Gráfico de barra**: Puntos encestados en una temporada. (escogemos este)
 
 ### Cosas por hacer:
-2. Escribir informe.
+1. Escribir informe.
 
 
 ## Ideas:
-2. Explicar mas el grafico (poner en eje y: "equipos" eje x: "promedio puntos")
+1. Explicar mas el grafico (poner en eje y: "equipos" eje x: "promedio puntos")
 
 
 ## Logos:
