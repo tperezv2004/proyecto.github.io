@@ -4,18 +4,13 @@
 
 ## Entrega 1
 
-### Requisitos:
-- Hacer gráficos (solo 1)
-
+### Cosas por hacer:
+1. Escribir informe.
 
 ### Gráficos Propuestos:
 - **Gráfico de líneas**: Puntos encestados por equipo por años.
 - **Gráfico de torta**: Campeonatos ganados.
 - **Gráfico de barra**: Puntos encestados en una temporada. (escogemos este)
-
-### Cosas por hacer:
-1. Escribir informe.
-
 
 ## Ideas:
 1. Explicar mas el grafico (poner en eje y: "equipos" eje x: "promedio puntos")
