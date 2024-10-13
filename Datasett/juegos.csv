@@ -1,109 +1,226 @@
 fecha,equipo,PTS,PTS_acumulados
-2023-10-24,Denver Nuggets,119,119
-2023-10-24,Golden State Warriors,104,104
-2023-10-24,Phoenix Suns,108,108
-2023-10-24,Los Angeles Lakers,107,107
-2023-10-25,Washington Wizards,120,120
-2023-10-25,Atlanta Hawks,110,110
-2023-10-25,Detroit Pistons,102,102
-2023-10-25,Minnesota Timberwolves,94,94
-2023-10-25,Cleveland Cavaliers,114,114
-2023-10-25,New Orleans Pelicans,111,111
-2023-10-25,Oklahoma City Thunder,124,124
-2023-10-25,Sacramento Kings,130,130
-2023-10-25,Dallas Mavericks,126,126
-2023-10-25,Portland Trail Blazers,111,111
-2023-10-25,Houston Rockets,86,86
-2023-10-25,Boston Celtics,108,108
-2023-10-25,Utah Jazz,114,114
-2023-10-25,Orlando Magic,116,116
-2023-10-25,New York Knicks,104,104
-2023-10-25,Indiana Pacers,143,143
-2023-10-25,Charlotte Hornets,116,116
-2023-10-25,Miami Heat,103,103
-2023-10-25,Toronto Raptors,97,97
-2023-10-25,Brooklyn Nets,113,113
-2023-10-25,Memphis Grizzlies,104,104
-2023-10-25,Chicago Bulls,104,104
-2023-10-25,San Antonio Spurs,119,119
-2023-10-25,Los Angeles Clippers,123,123
-2023-10-26,Phoenix Suns,95,203
-2023-10-26,Philadelphia 76ers,117,117
-2023-10-26,Los Angeles Lakers,100,207
-2023-10-26,Milwaukee Bucks,118,118
-2023-10-27,Oklahoma City Thunder,108,232
-2023-10-27,Denver Nuggets,108,227
-2023-10-27,Detroit Pistons,111,213
-2023-10-27,New York Knicks,126,230
-2023-10-27,Memphis Grizzlies,104,208
-2023-10-27,Toronto Raptors,103,200
-2023-10-27,Houston Rockets,122,208
-2023-10-27,Charlotte Hornets,99,215
-2023-10-27,Atlanta Hawks,120,230
-2023-10-27,Cleveland Cavaliers,105,219
-2023-10-27,Boston Celtics,119,227
-2023-10-27,Chicago Bulls,104,208
-2023-10-27,San Antonio Spurs,126,245
-2023-10-27,Dallas Mavericks,125,251
-2023-10-27,Utah Jazz,120,234
-2023-10-27,Portland Trail Blazers,97,208
-2023-10-27,Sacramento Kings,114,244
-2023-10-27,Golden State Warriors,122,226
-2023-10-27,Orlando Magic,102,218
-2023-10-27,Los Angeles Clippers,118,241
-2023-10-27,Brooklyn Nets,120,233
-2023-10-27,Miami Heat,111,214
-2023-10-28,Indiana Pacers,125,268
-2023-10-28,Memphis Grizzlies,106,314
-2023-10-28,Chicago Bulls,102,310
-2023-10-28,New York Knicks,87,317
-2023-10-28,Miami Heat,90,304
-2023-10-28,Detroit Pistons,118,331
-2023-10-28,Washington Wizards,113,233
-2023-10-28,New Orleans Pelicans,96,207
-2023-10-28,Cleveland Cavaliers,113,332
-2023-10-28,Toronto Raptors,107,307
-2023-10-28,Minnesota Timberwolves,106,200
-2023-10-28,Phoenix Suns,126,329
-2023-10-28,Philadelphia 76ers,114,231
-2023-10-28,Utah Jazz,104,338
-2023-10-29,Denver Nuggets,128,355
-2023-10-29,Oklahoma City Thunder,95,327
-2023-10-29,Houston Rockets,95,303
-2023-10-29,Milwaukee Bucks,110,228
-2023-10-29,Philadelphia 76ers,126,357
-2023-10-29,Sacramento Kings,132,376
-2023-10-29,Los Angeles Lakers,127,334
-2023-10-29,San Antonio Spurs,83,328
-2023-10-29,Portland Trail Blazers,98,306
-2023-10-29,Atlanta Hawks,127,357
-2023-10-29,Golden State Warriors,106,332
-2023-10-29,Los Angeles Clippers,123,364
-2023-10-30,Miami Heat,114,418
-2023-10-30,Dallas Mavericks,125,376
-2023-10-30,Minnesota Timberwolves,113,313
-2023-10-30,Brooklyn Nets,133,366
-2023-10-30,Boston Celtics,126,353
-2023-10-30,Chicago Bulls,112,422
-2023-10-30,Portland Trail Blazers,99,405
-2023-10-30,Detroit Pistons,112,443
-2023-10-30,Orlando Magic,103,321
-2023-10-30,Golden State Warriors,130,462
-2023-10-30,Los Angeles Lakers,106,440
-2023-10-30,Denver Nuggets,110,465
-2023-10-30,Oklahoma City Thunder,124,451
-2023-10-30,New Orleans Pelicans,102,309
-2023-10-30,Milwaukee Bucks,122,350
-2023-10-30,Memphis Grizzlies,110,424
-2023-10-30,Atlanta Hawks,127,484
-2023-10-30,Toronto Raptors,91,398
-2023-10-30,Charlotte Hornets,121,336
-2023-10-30,Washington Wizards,107,340
-2023-10-30,Indiana Pacers,105,373
-2023-10-30,Utah Jazz,102,440
-2023-10-31,New York Knicks,109,426
-2023-10-31,Los Angeles Clippers,118,482
-2023-10-31,Phoenix Suns,114,443
-2023-10-31,Cleveland Cavaliers,91,423
-2023-10-31,San Antonio Spurs,115,443
-2023-10-31,Orlando Magic,102,423
+2023-10,Atlanta Hawks,121,1181
+2023-10,Boston Celtics,117,688
+2023-10,Brooklyn Nets,122,712
+2023-10,Charlotte Hornets,112,667
+2023-10,Chicago Bulls,105,1044
+2023-10,Cleveland Cavaliers,105,1088
+2023-10,Dallas Mavericks,125,753
+2023-10,Denver Nuggets,116,1166
+2023-10,Detroit Pistons,110,1089
+2023-10,Golden State Warriors,115,1124
+2023-10,Houston Rockets,101,597
+2023-10,Indiana Pacers,124,784
+2023-10,Los Angeles Clippers,120,1210
+2023-10,Los Angeles Lakers,110,1088
+2023-10,Memphis Grizzlies,106,1050
+2023-10,Miami Heat,104,1039
+2023-10,Milwaukee Bucks,116,696
+2023-10,Minnesota Timberwolves,104,607
+2023-10,New Orleans Pelicans,103,627
+2023-10,New York Knicks,106,1077
+2023-10,Oklahoma City Thunder,112,1134
+2023-10,Orlando Magic,105,1078
+2023-10,Philadelphia 76ers,119,705
+2023-10,Phoenix Suns,110,1083
+2023-10,Portland Trail Blazers,101,1030
+2023-10,Sacramento Kings,125,750
+2023-10,San Antonio Spurs,110,1135
+2023-10,Toronto Raptors,99,1002
+2023-10,Utah Jazz,110,1126
+2023-10,Washington Wizards,113,693
+2023-11,Atlanta Hawks,123,19714
+2023-11,Boston Celtics,116,19544
+2023-11,Brooklyn Nets,114,18997
+2023-11,Charlotte Hornets,114,16806
+2023-11,Chicago Bulls,107,21439
+2023-11,Cleveland Cavaliers,112,19857
+2023-11,Dallas Mavericks,118,17897
+2023-11,Denver Nuggets,113,20474
+2023-11,Detroit Pistons,109,19752
+2023-11,Golden State Warriors,114,20565
+2023-11,Houston Rockets,113,14318
+2023-11,Indiana Pacers,128,18582
+2023-11,Los Angeles Clippers,110,18259
+2023-11,Los Angeles Lakers,113,22449
+2023-11,Memphis Grizzlies,105,15365
+2023-11,Miami Heat,114,19786
+2023-11,Milwaukee Bucks,121,21898
+2023-11,Minnesota Timberwolves,113,18539
+2023-11,New Orleans Pelicans,115,20530
+2023-11,New York Knicks,111,17552
+2023-11,Oklahoma City Thunder,121,19006
+2023-11,Orlando Magic,116,17802
+2023-11,Philadelphia 76ers,120,19787
+2023-11,Phoenix Suns,118,18573
+2023-11,Portland Trail Blazers,105,16821
+2023-11,Sacramento Kings,114,16895
+2023-11,San Antonio Spurs,112,17960
+2023-11,Toronto Raptors,114,19825
+2023-11,Utah Jazz,112,20507
+2023-11,Washington Wizards,116,19130
+2023-12,Atlanta Hawks,120,43740
+2023-12,Boston Celtics,126,42381
+2023-12,Brooklyn Nets,115,45309
+2023-12,Charlotte Hornets,106,34846
+2023-12,Chicago Bulls,114,42189
+2023-12,Cleveland Cavaliers,113,37693
+2023-12,Dallas Mavericks,118,48624
+2023-12,Denver Nuggets,116,46510
+2023-12,Detroit Pistons,111,36835
+2023-12,Golden State Warriors,119,39268
+2023-12,Houston Rockets,113,36474
+2023-12,Indiana Pacers,123,47587
+2023-12,Los Angeles Clippers,121,37517
+2023-12,Los Angeles Lakers,116,47883
+2023-12,Memphis Grizzlies,108,39947
+2023-12,Miami Heat,114,38193
+2023-12,Milwaukee Bucks,131,41876
+2023-12,Minnesota Timberwolves,114,36804
+2023-12,New Orleans Pelicans,119,42714
+2023-12,New York Knicks,121,40710
+2023-12,Oklahoma City Thunder,123,39177
+2023-12,Orlando Magic,111,40525
+2023-12,Philadelphia 76ers,122,43480
+2023-12,Phoenix Suns,114,41136
+2023-12,Portland Trail Blazers,115,34929
+2023-12,Sacramento Kings,119,40233
+2023-12,San Antonio Spurs,110,39546
+2023-12,Toronto Raptors,116,37983
+2023-12,Utah Jazz,115,41678
+2023-12,Washington Wizards,117,41639
+2024-01,Atlanta Hawks,117,72629
+2024-01,Boston Celtics,119,78230
+2024-01,Brooklyn Nets,110,64714
+2024-01,Charlotte Hornets,104,67087
+2024-01,Chicago Bulls,113,69473
+2024-01,Cleveland Cavaliers,120,57588
+2024-01,Dallas Mavericks,116,72927
+2024-01,Denver Nuggets,113,72851
+2024-01,Detroit Pistons,117,67118
+2024-01,Golden State Warriors,123,54302
+2024-01,Houston Rockets,115,74835
+2024-01,Indiana Pacers,121,87374
+2024-01,Los Angeles Clippers,121,68783
+2024-01,Los Angeles Lakers,120,74089
+2024-01,Memphis Grizzlies,109,64663
+2024-01,Miami Heat,104,72291
+2024-01,Milwaukee Bucks,121,80612
+2024-01,Minnesota Timberwolves,112,76936
+2024-01,New Orleans Pelicans,117,71617
+2024-01,New York Knicks,115,74733
+2024-01,Oklahoma City Thunder,118,82782
+2024-01,Orlando Magic,109,72761
+2024-01,Philadelphia 76ers,114,66181
+2024-01,Phoenix Suns,119,75168
+2024-01,Portland Trail Blazers,106,73397
+2024-01,Sacramento Kings,119,69114
+2024-01,San Antonio Spurs,115,72771
+2024-01,Toronto Raptors,116,68847
+2024-01,Utah Jazz,126,77278
+2024-01,Washington Wizards,111,69204
+2024-02,Atlanta Hawks,121,77885
+2024-02,Boston Celtics,122,64480
+2024-02,Brooklyn Nets,104,72725
+2024-02,Charlotte Hornets,103,74613
+2024-02,Chicago Bulls,116,60844
+2024-02,Cleveland Cavaliers,115,77517
+2024-02,Dallas Mavericks,121,70423
+2024-02,Denver Nuggets,112,69261
+2024-02,Detroit Pistons,112,65831
+2024-02,Golden State Warriors,120,85946
+2024-02,Houston Rockets,109,72731
+2024-02,Indiana Pacers,120,82416
+2024-02,Los Angeles Clippers,114,67558
+2024-02,Los Angeles Lakers,121,79159
+2024-02,Memphis Grizzlies,102,68645
+2024-02,Miami Heat,110,65620
+2024-02,Milwaukee Bucks,112,80131
+2024-02,Minnesota Timberwolves,115,67416
+2024-02,New Orleans Pelicans,114,76149
+2024-02,New York Knicks,106,74910
+2024-02,Oklahoma City Thunder,124,71863
+2024-02,Orlando Magic,110,72964
+2024-02,Philadelphia 76ers,109,74489
+2024-02,Phoenix Suns,119,69737
+2024-02,Portland Trail Blazers,100,51527
+2024-02,Sacramento Kings,118,74649
+2024-02,San Antonio Spurs,111,73329
+2024-02,Toronto Raptors,115,73326
+2024-02,Utah Jazz,117,71247
+2024-02,Washington Wizards,113,73581
+2024-03,Atlanta Hawks,112,120073
+2024-03,Boston Celtics,121,128721
+2024-03,Brooklyn Nets,107,120476
+2024-03,Charlotte Hornets,101,107361
+2024-03,Chicago Bulls,112,120898
+2024-03,Cleveland Cavaliers,105,129203
+2024-03,Dallas Mavericks,117,119379
+2024-03,Denver Nuggets,115,116952
+2024-03,Detroit Pistons,103,118899
+2024-03,Golden State Warriors,113,125991
+2024-03,Houston Rockets,119,114099
+2024-03,Indiana Pacers,118,127187
+2024-03,Los Angeles Clippers,112,131032
+2024-03,Los Angeles Lakers,119,114346
+2024-03,Memphis Grizzlies,103,106486
+2024-03,Miami Heat,108,110580
+2024-03,Milwaukee Bucks,114,114078
+2024-03,Minnesota Timberwolves,110,113770
+2024-03,New Orleans Pelicans,111,109576
+2024-03,New York Knicks,108,106201
+2024-03,Oklahoma City Thunder,117,121280
+2024-03,Orlando Magic,106,104742
+2024-03,Philadelphia 76ers,105,131305
+2024-03,Phoenix Suns,114,117581
+2024-03,Portland Trail Blazers,107,120832
+2024-03,Sacramento Kings,114,125467
+2024-03,San Antonio Spurs,111,114464
+2024-03,Toronto Raptors,105,114180
+2024-03,Utah Jazz,111,119420
+2024-03,Washington Wizards,108,123108
+2024-04,Atlanta Hawks,111,84347
+2024-04,Boston Celtics,113,116385
+2024-04,Brooklyn Nets,102,61303
+2024-04,Charlotte Hornets,108,66813
+2024-04,Chicago Bulls,113,80685
+2024-04,Cleveland Cavaliers,105,109838
+2024-04,Dallas Mavericks,107,113980
+2024-04,Denver Nuggets,114,112113
+2024-04,Detroit Pistons,102,69238
+2024-04,Golden State Warriors,113,83757
+2024-04,Houston Rockets,115,71689
+2024-04,Indiana Pacers,121,121489
+2024-04,Los Angeles Clippers,106,111710
+2024-04,Los Angeles Lakers,115,127109
+2024-04,Memphis Grizzlies,105,66466
+2024-04,Miami Heat,106,125405
+2024-04,Milwaukee Bucks,108,125591
+2024-04,Minnesota Timberwolves,115,109198
+2024-04,New Orleans Pelicans,105,130948
+2024-04,New York Knicks,111,118556
+2024-04,Oklahoma City Thunder,113,115756
+2024-04,Orlando Magic,106,116129
+2024-04,Philadelphia 76ers,112,121899
+2024-04,Phoenix Suns,109,112235
+2024-04,Portland Trail Blazers,98,67074
+2024-04,Sacramento Kings,109,92760
+2024-04,San Antonio Spurs,111,61976
+2024-04,Toronto Raptors,109,70654
+2024-04,Utah Jazz,110,64039
+2024-04,Washington Wizards,118,62748
+2024-05,Boston Celtics,113,109296
+2024-05,Cleveland Cavaliers,101,70771
+2024-05,Dallas Mavericks,110,140890
+2024-05,Denver Nuggets,97,72511
+2024-05,Indiana Pacers,114,138377
+2024-05,Los Angeles Clippers,97,20065
+2024-05,Miami Heat,84,9709
+2024-05,Milwaukee Bucks,98,10417
+2024-05,Minnesota Timberwolves,103,124905
+2024-05,New York Knicks,112,82383
+2024-05,Oklahoma City Thunder,106,63864
+2024-05,Orlando Magic,98,19426
+2024-05,Philadelphia 76ers,115,10151
+2024-06,Boston Celtics,101,58777
+2024-06,Dallas Mavericks,99,58961

@@ -50,7 +50,20 @@ function crearGrafico(equipos) {
             indexAxis: 'y',
             scales: {
                 x: {
+                    title: {
+                        display: true,
+                        text: 'Promedio de Puntos',
+                    },
                     beginAtZero: true
+
+                },
+
+                y: {
+                    title: {
+                        display: true,
+                        text: 'Equipos',
+                    },
+                    beginAtZero: true,
                 }
             },
             plugins: {
@@ -77,7 +90,7 @@ function crearGrafico(equipos) {
 }
 
 async function init() {
-    const csvData = await cargarCSV('Datasett/EquiposTemporada23_24.csv'); 
+    const csvData = await cargarCSV('../../Datasett/EquiposTemporada23_24.csv'); 
     const equipos = procesarCSV(csvData);
     crearGrafico(equipos);
 }
