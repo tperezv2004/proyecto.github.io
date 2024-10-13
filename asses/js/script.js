@@ -40,9 +40,9 @@ function crearGrafico(equipos) {
             label: equipo,
             data: equipos[equipo].PTS,
             borderColor: getRandomColor(),
-            borderWidth: 4,
+            borderWidth: 3,
             fill: false,
-            pointRadius:  2 
+            pointRadius:  2, 
         });
     }
 
