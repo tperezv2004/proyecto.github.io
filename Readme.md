@@ -7,15 +7,13 @@
 ### Cosas por hacer:
 1. Escribir informe.
 
-<<<<<<< HEAD
 ### Gráficos Propuestos:
 - **Gráfico de líneas**: Puntos encestados por equipo por años. serian muchos equipos = recortar la cantidad de equipos?
 =======
 ### Gráficos Propuestos: (PODEMOS CAMBIAR DE GRAFICO)
 - **Gráfico de líneas**: Puntos encestados por equipo por años.
->>>>>>> a871be0e55f19810cda0acfb4c0124f5c9896ae2
 - **Gráfico de torta**: Campeonatos ganados.
-- **Gráfico de barra**: Puntos encestados en una temporada. (escogemos este)
+- **Gráfico de barra**: Puntos encestados en una temporada. 
 - Podemos agregar mas graficos
 
 ### Ideas:
@@ -25,3 +23,4 @@
 ## Datasets:
 1. [NBA Player Stats 2023-2024 - Kaggle](https://www.kaggle.com/datasets/vivovinco/2023-2024-nba-player-stats?select=2023-2024+NBA+Player+Stats+-+Regular.csv)
 2. [NBA 2024 - Basketball Reference](https://www.basketball-reference.com/leagues/NBA_2024.html)
+3. [NBA Games StaTA 2023-2024] (https://www.basketball-reference.com/leagues/NBA_2024_games-october.html)
