@@ -14,9 +14,7 @@
 - Podemos agregar mas graficos
 
 ### Ideas:
-1. Explicar mas el grafico (poner en eje y: "equipos" eje x: "promedio puntos")
-2. Cambiar el titulo por: "Promedio de Puntos Anotados por Equipo en la temporada 23-24(Top 10)"
-3. Ordenar Datasett
+1. Ordenar carpeta Datasett
 
 ## Datasets:
 1. [NBA Player Stats 2023-2024 - Kaggle](https://www.kaggle.com/datasets/vivovinco/2023-2024-nba-player-stats?select=2023-2024+NBA+Player+Stats+-+Regular.csv)
