@@ -7,9 +7,6 @@
 ### Cosas por hacer:
 1. Escribir informe.
 
-### Gráficos Propuestos:
-- **Gráfico de líneas**: Puntos encestados por equipo por años. serian muchos equipos = recortar la cantidad de equipos?
-=======
 ### Gráficos Propuestos: (PODEMOS CAMBIAR DE GRAFICO)
 - **Gráfico de líneas**: Puntos encestados por equipo por años. (GRAFICO A USAR)
 - **Gráfico de torta**: Campeonatos ganados.
