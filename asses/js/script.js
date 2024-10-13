@@ -6,91 +6,115 @@ async function cargarCSV(url) {
 
 function procesarCSV(data) {
     const lineas = data.split('\n');
-    const equipos = [];
+    const equiposData = {};
+
+    // Lista de equipos 
+    const equiposFiltrados = [  "Boston Celtics", "Dallas Mavericks", 
+                            "Atlanta Hawks", "Denver Nuggets", "Miami Heat"];
 
     lineas.forEach((linea, index) => {
-        if (index > 0) { // Ignorar la primera línea
-            const [equipo, PTS_por_juego] = linea.split(',');
-            if (equipo && PTS_por_juego) {
-                equipos.push({ 
-                    equipo, 
-                    PTS_por_juego: parseFloat(PTS_por_juego) 
-                });
+        if (index > 0) { 
+            const [fecha, equipo, PTS , PTS_acumulados] = linea.split(',');
+            
+            // Solo equipos que estan en la lista filtrada
+            if (equiposFiltrados.includes(equipo) && PTS) {
+                if (!equiposData[equipo]) {
+                    equiposData[equipo] = { fechas: [], PTS: [] };
+                }
+                equiposData[equipo].fechas.push(fecha);
+                equiposData[equipo].PTS.push(parseFloat(PTS));
             }
         }
     });
 
-    return equipos;
+    return equiposData;
 }
 
+
 function crearGrafico(equipos) {
-    const ctx = document.getElementById('chart').getContext('2d');
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const datasets = [];
 
-    const top10 = equipos.slice(0, 10);
+    for (const equipo in equipos) {
+        datasets.push({
+            label: equipo,
+            data: equipos[equipo].PTS,
+            borderColor: getRandomColor(),
+            borderWidth: 4,
+            fill: false,
+            pointRadius:  2 
+        });
+    }
 
-    new Chart(ctx, {
-        type: 'bar',
+    const myChart = new Chart(ctx, {
+        type: 'line',
         data: {
-            labels: top10.map(item => item.equipo),
-            datasets: [{
-                label: 'Promedio de Puntos',
-                data: top10.map(item => item.PTS_por_juego),
-                backgroundColor: 'skyblue',
-                borderColor: 'blue',
-                borderWidth: 1,
-                hoverBackgroundColor: 'oeange',
-                /*
-                colores:
-                blue
-                oeange
-                */
-            }]
+            labels: equipos[Object.keys(equipos)[0]].fechas, 
+            datasets: datasets,
         },
         options: {
-            indexAxis: 'y',
+            responsive: true,
             scales: {
                 x: {
                     title: {
                         display: true,
-                        text: 'Promedio de Puntos',
+                        text: 'Fecha',
                     },
-                    beginAtZero: true
-
+                    ticks: {
+                        autoSkip: true,
+                        maxTicksLimit: 10,
+                    },
                 },
-
                 y: {
+                    min: 100,
+                    max: 130,
+                    ticks: {
+                        stepSize: 2
+                    },
                     title: {
                         display: true,
-                        text: 'Equipos',
+                        text: 'Puntos Promedio',
                     },
                     beginAtZero: true,
                 }
             },
             plugins: {
-                legend: { 
+                legend: {
+                    position: 'left',  // Coloca la leyenda a la izquierda
+                    align: 'start',    // Alinea la leyenda con el gráfico
                     onClick: null,
-                },
-                datalabels: { // dsp borrar ?
-                    anchor: 'end', 
-                    align: 'end',  
-                    formatter: (value, context) => {
-                        return value; 
-                    },
-                    color: 'black', 
-                },
 
-                tooltip: { // dsp borrar
-                    enabled: false,
+                    labels: {
+                        usePointStyle: true, 
+                    },
+
+                    title: {
+                        display: true,
+                        text: 'Equipos',
+                    },
+                },
+                tooltip: { // quitar tooltip?
+                    //enabled: false
                 }
             }
-
-        },
-        plugins: [ChartDataLabels] 
+        }
     });
 }
 
+
+// Función para generar colores aleatorios
+function getRandomColor() { // modificar
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
+// Inicializar el gráfico
 async function init() {
-    const csvData = await cargarCSV('../../Datasett/EquiposTemporada23_24.csv'); 
+    const csvData = await cargarCSV('Datasett/juegos.csv'); 
     const equipos = procesarCSV(csvData);
     crearGrafico(equipos);
 }
