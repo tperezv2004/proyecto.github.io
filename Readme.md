@@ -11,7 +11,7 @@
 - Explicar por qué escogimos el gráfico y no otro
 
 ### Gráficos Propuestos:
-- **Gráfico de líneas**: Puntos encestados por equipo por años.
+- **Gráfico de líneas**: Puntos encestados por equipo por años. serian muchos equipos = recortar la cantidad de equipos?
 - **Gráfico de torta**: Campeonatos ganados.
 
 ## Cosas por hacer (No aplicables a la Entrega 1):
