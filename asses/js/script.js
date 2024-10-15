@@ -68,7 +68,7 @@ function crearGrafico(equipos) {
                     type: 'label',
                     xValue: targetIndex,
                     yValue: targetPTS,
-                    content: ['Mayor promedio mensual de la temporada'],
+                    content: ['Máximo'],
                     yAdjust: -15,
                 });
             }
@@ -87,7 +87,7 @@ function crearGrafico(equipos) {
                     type: 'label',
                     xValue: targetIndex,
                     yValue: targetPTS,
-                    content: ['Menor promedio mensual de la temporada'],
+                    content: ['Mínimo'],
                     yAdjust: 18,
                 });
             }
