@@ -9,7 +9,7 @@ function procesarCSV(data) {
     const equiposData = {};
 
     // Lista de equipos 
-    const equiposFiltrados = [  "Boston Celtics", "Dallas Mavericks", "Promedio", 
+    const equiposFiltrados = ["Boston Celtics", "Dallas Mavericks", "Promedio", 
                             "Atlanta Hawks", "Miami Heat", "Memphis Grizzlies"];
 
     lineas.forEach((linea, index) => {
@@ -104,10 +104,6 @@ function crearGrafico(equipos) {
             responsive: true,
             scales: {
                 x: {
-                    title: {
-                        display: true,
-                        text: 'Fecha',
-                    },
                     ticks: {
                         autoSkip: true,
                         maxTicksLimit: 10,
@@ -140,16 +136,12 @@ function crearGrafico(equipos) {
                     labels: {
                         usePointStyle: true,
                     },
-                    title: {
-                        display: true,
-                        text: 'Equipos',
-                    },
                 },
                 annotation: {
                     annotations: annotations,
                 },
                 tooltip: {
-                    //enabled: false
+                    enabled: true
                 }
             }
         }
