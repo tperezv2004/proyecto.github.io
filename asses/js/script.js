@@ -1,26 +1,27 @@
+let myChart; // variable grafico
+
+// cargar datos
 async function cargarCSV(url) {
     const response = await fetch(url);
     const data = await response.text();
     return data;
 }
 
-function procesarCSV(data) {
+// filtrar datos
+function procesarCSV(data, Division) {
     const lineas = data.split('\n');
     const equiposData = {};
 
-    // Lista de equipos 
-    const equiposFiltrados = ["Boston Celtics", "Dallas Mavericks", "Promedio", 
-                            "Atlanta Hawks", "Miami Heat", "Memphis Grizzlies"];
-
     lineas.forEach((linea, index) => {
         if (index > 0) { 
-            const [fecha, equipo, PTS , PTS_acumulados] = linea.split(',');
+            const [fecha, equipo, PTS, div] = linea.split(',');
         
-            // Solo equipos que estan en la lista filtrada
-            if (equiposFiltrados.includes(equipo) && PTS) {
+            // Solo equipos que están en la lista filtrada
+            if (div && div.includes(Division) && PTS) {
                 if (!equiposData[equipo]) {
                     equiposData[equipo] = { fechas: [], PTS: [] };
                 }
+                // dsp aca hay un if
                 equiposData[equipo].fechas.push(fecha);
                 equiposData[equipo].PTS.push(parseFloat(PTS));
             }
@@ -30,71 +31,59 @@ function procesarCSV(data) {
     return equiposData;
 }
 
-const coloresEquipos = {
-    "Boston Celtics": '#552583',     // Morado
-    "Dallas Mavericks": '#94DD0B ',    // Morado
-    "Promedio": '#000000',            // Negro
-    "Atlanta Hawks": '#F05D23',       // Naranja
-    "Miami Heat": '#F9A800',          // Amarillo
-    "Memphis Grizzlies": '#5D76A9'    // violeta
-};
+// función onClick
+function handleLegendClick(e, legendItem) {
+    const index = legendItem.datasetIndex;
 
+    // Si el equipo seleccionado ya esta
+    const allHidden = myChart.data.datasets.every(dataset => dataset.hidden || dataset === myChart.data.datasets[index]);
+    
+    if (allHidden) { // ver todo los equipos
+        myChart.data.datasets.forEach((dataset) => {
+            dataset.hidden = false;
+        });
+
+    } else { // ocultar todos los equipos menos el seleccionado
+        myChart.data.datasets.forEach((dataset) => {
+            dataset.hidden = true;
+        });
+
+        myChart.data.datasets[index].hidden = false;
+    }
+
+    myChart.update();
+}
+
+// Crear gráfico
 function crearGrafico(equipos) {
     const ctx = document.getElementById('myChart').getContext('2d');
+
+    if (myChart) {
+        myChart.destroy();
+    }
+
     const datasets = [];
-    let annotations = [];  // Array para almacenar las anotaciones
+    let annotations = [];
+
+    const colores = ['blue', 'orange', 'pink', 'purple', 'turquoise'];
+
+    let colorIndex = 0; //  para los colores
 
     for (const equipo in equipos) {
         datasets.push({
             label: equipo,
             data: equipos[equipo].PTS,
-            borderColor: coloresEquipos[equipo] || getRandomColor(), // Usa el color específico o uno aleatorio si no está definido
-            borderWidth: equipo === "Promedio" ? 7 : 3, // Línea negra más gruesa para "Promedio"
-            pointRadius: equipo === "Promedio" ? 4 : 2, // Línea negra más gruesa para "Promedio"
-            fill: false,
-            pointBackgroundColor: '#D3D3D3', // Gris claro
+            borderWidth: 4,
+            pointRadius: 2,
+            pointBackgroundColor: '#D3D3D3', 
+            borderColor: colores[colorIndex],
         });
 
-        // Anotaciones para Boston Celtics
-        if (equipo === "Boston Celtics") {
-            const targetPTS = 126;
-            const targetIndex = equipos[equipo].PTS.indexOf(targetPTS);
-
-            if (targetIndex !== -1) {
-                datasets[datasets.length - 1].pointBackgroundColor = equipos[equipo].PTS.map((pts, index) => index === targetIndex ? 'red' : '#D3D3D3');
-                datasets[datasets.length - 1].pointRadius = equipos[equipo].PTS.map((pts, index) => index === targetIndex ? 6 : 2);
-
-                annotations.push({
-                    type: 'label',
-                    xValue: targetIndex,
-                    yValue: targetPTS,
-                    content: ['Máximo'],
-                    yAdjust: -15,
-                });
-            }
-        }
-
-        // Anotaciones para Memphis Grizzlies
-        if (equipo === "Memphis Grizzlies") {
-            const targetPTS = 102;
-            const targetIndex = 4;
-
-            if (targetIndex !== -1) {
-                datasets[datasets.length - 1].pointBackgroundColor = equipos[equipo].PTS.map((pts, index) => index === targetIndex ? 'red' : '#D3D3D3');
-                datasets[datasets.length - 1].pointRadius = equipos[equipo].PTS.map((pts, index) => index === targetIndex ? 6 : 2);
-
-                annotations.push({
-                    type: 'label',
-                    xValue: targetIndex,
-                    yValue: targetPTS,
-                    content: ['Mínimo'],
-                    yAdjust: 18,
-                });
-            }
-        }
+        colorIndex++; 
     }
 
-    const myChart = new Chart(ctx, {
+    // Crear gráfico
+    myChart = new Chart(ctx, {
         type: 'line',
         data: {
             labels: equipos[Object.keys(equipos)[0]].fechas,
@@ -113,7 +102,7 @@ function crearGrafico(equipos) {
                     },
                 },
                 y: {
-                    min: 100,
+                    min: 95,
                     max: 130,
                     ticks: {
                         stepSize: false,
@@ -132,9 +121,10 @@ function crearGrafico(equipos) {
                 legend: {
                     position: 'left',
                     align: 'start',
-                    onClick: null,
+                    onClick: handleLegendClick, // cuando uno apreta un equipo
                     labels: {
                         usePointStyle: true,
+                        padding: 35, 
                     },
                 },
                 annotation: {
@@ -148,28 +138,20 @@ function crearGrafico(equipos) {
     });
 }
 
+//  cambiar conferencia y actualizar grafico
+document.getElementById('Conferencias').addEventListener('change', async (event) => {
+    const selectedOption = event.target.value;
+    console.log(`Opción seleccionada: ${selectedOption}`);
 
+    const csvData = await cargarCSV('Datasett/juegos.csv'); 
+    const equipos = procesarCSV(csvData, selectedOption);
+    crearGrafico(equipos);
+});
 
-
-function getRandomColor() {
-    const letters = '0123456789ABCDEF';
-    let color;
-
-    do {
-        color = '#';
-        for (let i = 0; i < 6; i++) {
-            color += letters[Math.floor(Math.random() * 16)];
-        }
-    } while (color === '#000000'); // Verifica que no sea negro
-
-    return color;
-}
-
-
-// Inicializar el gráfico
+// Inicializar el grafico al cargar la página
 async function init() {
     const csvData = await cargarCSV('Datasett/juegos.csv'); 
-    const equipos = procesarCSV(csvData);
+    const equipos = procesarCSV(csvData, "Central");
     crearGrafico(equipos);
 }
 

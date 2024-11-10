@@ -17,6 +17,31 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+#myChart {
+    margin-top: -10px; /* Ajusta el valor según el espacio que necesites */
+}
+
 h1 {
     text-align: center;
+}
+
+.dropdown-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; /* Alinear los elementos a la derecha */
+    margin-bottom: 20px; /* Espaciado entre el dropdown y el gráfico */
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+}
+
+label {
+    margin-bottom: 5px; /* Espacio entre el label y el select */
+    font-weight: bold;
+}
+
+select {
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
 }

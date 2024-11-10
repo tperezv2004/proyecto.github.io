@@ -13,8 +13,25 @@
 <body>
     <div class="container">
         <h1>Promedio Mensual de Puntos en la Temporada 2023-2024 de la NBA</h1>
+    
+        <!-- boton -->
+        <div class="dropdown-container">
+            <label for="Conferencias">Conferencias</label>
+
+            <select id="Conferencias">
+                <option value="Sudoeste">Sudoeste</option>
+                <option value="Noroeste">Noroeste</option>
+                <option value="Pacifico">Pacifico</option>
+                <option value="Atlantico">Atlantico</option>
+                <option value="Central">Central</option>
+                <option value="Sudeste">Sudeste</option>
+            </select>
+        </div>
+    
+        <!-- grafico -->
         <canvas id="myChart" width="800" height="400"></canvas>
     </div>
+    
     <script src="asses/js/script.js"></script>
 </body>
 </html>
