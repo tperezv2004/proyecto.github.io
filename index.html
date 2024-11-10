@@ -6,30 +6,36 @@
     <link rel="stylesheet" href="asses/css/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation"></script>
-
-
     <title>Proyecto info vis</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Promedio Mensual de Puntos en la Temporada 2023-2024 de la NBA</h1>
-    
-        <!-- boton -->
-        <div class="dropdown-container">
-            <label for="Conferencias">Conferencias</label>
-
-            <select id="Conferencias">
-                <option value="Sudoeste">Sudoeste</option>
-                <option value="Noroeste">Noroeste</option>
-                <option value="Pacifico">Pacifico</option>
-                <option value="Atlantico">Atlantico</option>
-                <option value="Central">Central</option>
-                <option value="Sudeste">Sudeste</option>
-            </select>
+    <div class="main-container">
+        <!-- Contenedor principal -->
+        <div class="container">
+            <h1>Promedio Mensual de Puntos en la Temporada 2023-2024 de la NBA</h1>
+            <div class="dropdown-container">
+                <label for="Conferencias">Conferencias</label>
+                <select id="Conferencias">
+                    <option value="Sudoeste">Sudoeste</option>
+                    <option value="Noroeste">Noroeste</option>
+                    <option value="Pacifico">Pacifico</option>
+                    <option value="Atlantico">Atlantico</option>
+                    <option value="Central">Central</option>
+                    <option value="Sudeste">Sudeste</option>
+                </select>
+            </div>
+            <canvas id="myChart" width="800" height="400"></canvas>
         </div>
-    
-        <!-- grafico -->
-        <canvas id="myChart" width="800" height="400"></canvas>
+
+        <!-- Contenedor al lado derecho -->
+        <div class="side-container">
+            <img src="imagenes/logoNba.png" alt="imagen" class="center-image">
+            
+            <div class="team-name-container">
+                <h3>Equipo Seleccionado: <span id="team-name">Ninguno</span></h3>
+            </div>
+
+        </div>
     </div>
     
     <script src="asses/js/script.js"></script>

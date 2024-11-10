@@ -31,28 +31,34 @@ function procesarCSV(data, Division) {
     return equiposData;
 }
 
-// función onClick
+// Función que se llama cuando se hace clic en la leyenda
 function handleLegendClick(e, legendItem) {
     const index = legendItem.datasetIndex;
 
-    // Si el equipo seleccionado ya esta
+    // Obtener el nombre del equipo seleccionado
+    const equipoSeleccionado = myChart.data.datasets[index].label;
     const allHidden = myChart.data.datasets.every(dataset => dataset.hidden || dataset === myChart.data.datasets[index]);
     
-    if (allHidden) { // ver todo los equipos
+    if (allHidden) { // Ver todos los equipos
+    
+        document.getElementById('team-name').innerText = "Ninguno";
+
         myChart.data.datasets.forEach((dataset) => {
             dataset.hidden = false;
         });
 
-    } else { // ocultar todos los equipos menos el seleccionado
+    } else { // Ocultar todos los equipos menos el seleccionado
         myChart.data.datasets.forEach((dataset) => {
             dataset.hidden = true;
         });
-
+        document.getElementById('team-name').innerText = equipoSeleccionado;
         myChart.data.datasets[index].hidden = false;
     }
 
     myChart.update();
 }
+
+
 
 // Crear gráfico
 function crearGrafico(equipos) {

@@ -5,16 +5,41 @@ body {
     padding: 20px;
 }
 
+.main-container {
+    display: flex;
+    gap: 20px; /* Espacio entre los contenedores */
+    justify-content: center;
+    align-items: stretch; /* Asegura que los contenedores tengan la misma altura */
+    width: 85%; /* El main container ocupa el 80% de la página */
+    margin: auto; /* Centra el main container */
+}
+
 .container {
-    
     background-color: #ececec;
-    max-width: 1000px;
-    height: auto;
-    margin: auto;
     background: white;
+    width: 70%; /* Asegura que el contenedor ocupe el 100% del espacio disponible dentro del main container */
+    height: auto;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor lateral derecho */
+.side-container {
+    background-color: #ececec;
+    background: white;
+    width: 30%; /* Asegura que el contenedor ocupe el 100% del espacio disponible dentro del main container */
+    padding: 20px;
+    height: auto;
+  
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+    flex: 5; /* El contenedor lateral ocupa el 30% del main container */
 }
 
 #myChart {
@@ -44,4 +69,21 @@ select {
     border: 1px solid #ccc;
     border-radius: 4px;
     background-color: #f8f8f8;
+}
+
+/* Imagen centrada */
+.center-image {
+    margin-top: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+.team-name-container {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
 }
