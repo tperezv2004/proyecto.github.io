@@ -1,23 +1,20 @@
-let myChart; // variable grafico
+let myChart; 
+let equipoSeleccionado = null; // equipo seleccionado
+let audioPlaying = false; // audio está sonando
 
-let equipoSeleccionado = null; // Variable para guardar el equipo seleccionado
-
-// Función para reproducir sonido con ajuste de volumen según la posición
 function reproducirSonido(volumen) {
-    audio.volume = volumen;  // Ajusta el volumen entre 0 y 1
-    audio.currentTime = 0;  // Reinicia el audio
+    audio.volume = volumen;  
+    audio.currentTime = 0;  
     audio.play();
 }
 
-// Función para calcular el volumen según la posición Y del punto
 function calcularVolumen(posicionY, alturaCanvas) {
-    const volumen = 1 - (posicionY / alturaCanvas);  // Escala el volumen
-    return Math.max(0, Math.min(volumen, 1));  // Asegura que esté entre 0 y 1
+    const volumen = 1 - (posicionY / alturaCanvas)* 1.5;  
+    return Math.max(0, Math.min(volumen, 1));  // 
 }
 
 function agregarEventosMouse() {
     const canvas = document.getElementById('myChart');
-    let audioPlaying = false; // Para controlar si el audio está sonando
 
     canvas.addEventListener('mousemove', (event) => {
         const points = myChart.getElementsAtEventForMode(event, 'nearest', { intersect: true }, true);
@@ -27,8 +24,10 @@ function agregarEventosMouse() {
             const posicionY = point.element.y; // Posición Y del punto
             const alturaCanvas = canvas.clientHeight;
             const volumen = calcularVolumen(posicionY, alturaCanvas); // Calcula el volumen
-            
-            if (!audioPlaying) {
+
+            // Solo reproduce sonido si hay una única línea visible
+            const visibleDatasets = myChart.data.datasets.filter(dataset => !dataset.hidden);
+            if (visibleDatasets.length === 1 && !audioPlaying) {
                 reproducirSonido(volumen); // Reproduce el sonido si no se está reproduciendo
                 audioPlaying = true;
             }
@@ -40,14 +39,8 @@ function agregarEventosMouse() {
         }
     });
 
-    canvas.addEventListener('mouseout', (event) => {
-        if (audioPlaying) {
-            audio.pause(); // Pausa el audio cuando el mouse sale del canvas
-            audioPlaying = false;
-        }
-    });
-}
 
+}
 
 
 // cargar datos
@@ -126,7 +119,6 @@ async function handleLegendClick(e, legendItem) {
         myChart.data.datasets.forEach((dataset) => {
             dataset.hidden = false;
         });
-
     } else { // Ocultar todos los equipos menos el seleccionado
         myChart.data.datasets.forEach((dataset) => {
             dataset.hidden = true;
@@ -175,6 +167,7 @@ async function handleLegendClick(e, legendItem) {
         const playerInfo = document.createElement('p');
         playerInfo.innerText = `Puntos: ${equipoInfo.players[0].puntos}, Rebotes: ${equipoInfo.players[0].rebotes}, Asistencias: ${equipoInfo.players[0].asistencias}`;
         equipoContainer.appendChild(playerInfo);
+    
     } else {
         console.log('No hay información disponible para este equipo');
 
@@ -188,7 +181,7 @@ async function handleLegendClick(e, legendItem) {
 
 
 
-// Crear gráfico
+// Crear grafico
 function crearGrafico(equipos) {
     const ctx = document.getElementById('myChart').getContext('2d');
 
@@ -212,7 +205,7 @@ function crearGrafico(equipos) {
         colorIndex++;
     }
 
-    // Crear gráfico
+    // Crear grafico
     myChart = new Chart(ctx, {
         type: 'line',
         data: {
@@ -249,15 +242,19 @@ function crearGrafico(equipos) {
 
 }
 
-// Cambiar conferencia y actualizar gráfico
+// Cambiar conferencia y actualizar grafico
 document.getElementById('Conferencias').addEventListener('change', async (event) => {
     const selectedOption = event.target.value;
     const csvData = await cargarCSV('Datasett/juegos.csv'); 
     const equipos = procesarCSV(csvData, selectedOption);
+
+    const equipoContainer = document.getElementById('team-info'); // Contenedor donde mostrar la info
+    equipoContainer.innerHTML = '';  // Limpiar el contenedor de información
+    
     crearGrafico(equipos);
 });
 
-// Inicializar el gráfico al cargar la página
+// Inicializar el grafico al cargar la página
 async function init() {
     const csvData = await cargarCSV('Datasett/juegos.csv'); 
     const equipos = procesarCSV(csvData, "Central");
