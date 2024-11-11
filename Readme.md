@@ -1,6 +1,7 @@
 # Proyecto NBA
 
 [**PÁGINA WEB**](https://tperezv2004.github.io/proyecto.github.io/)
+[**VIDEO**](https://drive.google.com/file/d/1VzqxBi6_-chSD-9BeAAwIHxOf-bAiTOL/view)
 
 ## Entrega 1
 
