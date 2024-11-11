@@ -27,16 +27,26 @@
             <canvas id="myChart" width="800" height="400"></canvas>
         </div>
 
-        <!-- Contenedor al lado derecho -->
+            <!-- Contenedor al lado derecho -->
         <div class="side-container">
-            <img src="imagenes/logoNba.png" alt="imagen" class="center-image">
-            
-            <div class="team-name-container">
-                <h3>Equipo Seleccionado: <span id="team-name">Ninguno</span></h3>
+            <div id="left-info">
+                <h3>Resumen del Gráfico</h3>
+                <p>Este gráfico muestra el promedio mensual de puntos por equipo en la temporada actual de la NBA. Selecciona un equipo en la leyenda para resaltar su desempeño o explora otras conferencias usando el menú desplegable.</p>
             </div>
-
+            
+            
+            <!-- Contenedor para mostrar la información detallada del equipo -->
+            <div id="team-info"></div>
         </div>
+            
     </div>
+    <!-- Agregar el elemento de audio -->
+    <audio id="audio" controls>
+        <source src="audio/aplausos.mp4" type="audio/mp3">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    
     
     <script src="asses/js/script.js"></script>
 </body>

@@ -1,5 +1,55 @@
 let myChart; // variable grafico
 
+let equipoSeleccionado = null; // Variable para guardar el equipo seleccionado
+
+// Función para reproducir sonido con ajuste de volumen según la posición
+function reproducirSonido(volumen) {
+    audio.volume = volumen;  // Ajusta el volumen entre 0 y 1
+    audio.currentTime = 0;  // Reinicia el audio
+    audio.play();
+}
+
+// Función para calcular el volumen según la posición Y del punto
+function calcularVolumen(posicionY, alturaCanvas) {
+    const volumen = 1 - (posicionY / alturaCanvas);  // Escala el volumen
+    return Math.max(0, Math.min(volumen, 1));  // Asegura que esté entre 0 y 1
+}
+
+function agregarEventosMouse() {
+    const canvas = document.getElementById('myChart');
+    let audioPlaying = false; // Para controlar si el audio está sonando
+
+    canvas.addEventListener('mousemove', (event) => {
+        const points = myChart.getElementsAtEventForMode(event, 'nearest', { intersect: true }, true);
+        
+        if (points.length) {
+            const point = points[0]; // Obtiene el primer punto seleccionado
+            const posicionY = point.element.y; // Posición Y del punto
+            const alturaCanvas = canvas.clientHeight;
+            const volumen = calcularVolumen(posicionY, alturaCanvas); // Calcula el volumen
+            
+            if (!audioPlaying) {
+                reproducirSonido(volumen); // Reproduce el sonido si no se está reproduciendo
+                audioPlaying = true;
+            }
+        } else {
+            if (audioPlaying) {
+                audio.pause(); // Pausa el audio si no hay puntos bajo el mouse
+                audioPlaying = false;
+            }
+        }
+    });
+
+    canvas.addEventListener('mouseout', (event) => {
+        if (audioPlaying) {
+            audio.pause(); // Pausa el audio cuando el mouse sale del canvas
+            audioPlaying = false;
+        }
+    });
+}
+
+
+
 // cargar datos
 async function cargarCSV(url) {
     const response = await fetch(url);
@@ -31,18 +81,48 @@ function procesarCSV(data, Division) {
     return equiposData;
 }
 
-// Función que se llama cuando se hace clic en la leyenda
-function handleLegendClick(e, legendItem) {
+async function procesarCSVDetalles() {
+    const data = await cargarCSV('Datasett/equipos.csv')
+    const lineas = data.split('\n');
+    const equiposDetalles = {};
+
+    lineas.forEach((linea, index) => {
+        if (index > 0) {
+            const [equipo, campeonatos, ciudad, posicion, conferencia,PTS_por_juego, player, puntos, rebotes, asistencias] = linea.split(',');
+
+            // Guardamos los detalles de cada equipo
+            if (equipo) {
+                if (!equiposDetalles[equipo]) {
+                    equiposDetalles[equipo] = {
+                        campeonatos: campeonatos,
+                        ciudad: ciudad,
+                        posicion: posicion,
+                        PTS_por_juego: parseFloat(PTS_por_juego),
+                        players: []
+                    };
+                }
+
+                // Agregar los jugadores y sus estadísticas
+                equiposDetalles[equipo].players.push({
+                    player: player,
+                    puntos: parseFloat(puntos),
+                    rebotes: parseFloat(rebotes),
+                    asistencias: parseFloat(asistencias)
+                });
+            }
+        }
+    });
+
+    return equiposDetalles;
+}
+
+async function handleLegendClick(e, legendItem) {
     const index = legendItem.datasetIndex;
-
-    // Obtener el nombre del equipo seleccionado
-    const equipoSeleccionado = myChart.data.datasets[index].label;
+    equipoSeleccionado = myChart.data.datasets[index].label; // Guarda el equipo seleccionado
+    // Agregar eventos de mouse
     const allHidden = myChart.data.datasets.every(dataset => dataset.hidden || dataset === myChart.data.datasets[index]);
-    
-    if (allHidden) { // Ver todos los equipos
-    
-        document.getElementById('team-name').innerText = "Ninguno";
 
+    if (allHidden) { // Ver todos los equipos
         myChart.data.datasets.forEach((dataset) => {
             dataset.hidden = false;
         });
@@ -51,12 +131,60 @@ function handleLegendClick(e, legendItem) {
         myChart.data.datasets.forEach((dataset) => {
             dataset.hidden = true;
         });
-        document.getElementById('team-name').innerText = equipoSeleccionado;
         myChart.data.datasets[index].hidden = false;
+        agregarEventosMouse();
+    }
+    
+    // Cargar los detalles de los equipos
+    const equiposDetalles = await procesarCSVDetalles();
+
+    // Verificar si el equipo existe en los detalles
+    if (equiposDetalles[equipoSeleccionado] && allHidden == false) {
+        const equipoInfo = equiposDetalles[equipoSeleccionado];  // Detalles del equipo
+
+        // Actualizar la información del equipo en el DOM
+        const equipoContainer = document.getElementById('team-info'); // Contenedor donde mostrar la info
+        equipoContainer.innerHTML = '';  // Limpiar el contenedor de información
+
+        const nombreEquipo = document.createElement('h2');
+        nombreEquipo.innerText = equipoSeleccionado;
+        equipoContainer.appendChild(nombreEquipo);
+
+        const campeonatos = document.createElement('p');
+        campeonatos.innerText = `Campeonatos: ${equipoInfo.campeonatos}`;
+        equipoContainer.appendChild(campeonatos);
+
+        const ciudad = document.createElement('p');
+        ciudad.innerText = `Ciudad: ${equipoInfo.ciudad}`;
+        equipoContainer.appendChild(ciudad);
+
+        const posicion = document.createElement('p');
+        posicion.innerText = `Posición: ${equipoInfo.posicion}`;
+        equipoContainer.appendChild(posicion);
+
+        const puntosPorJuego = document.createElement('p');
+        puntosPorJuego.innerText = `PTS por Juego: ${equipoInfo.PTS_por_juego}`;
+        equipoContainer.appendChild(puntosPorJuego);
+
+        // Título para el jugador destacado
+        const playersTitle = document.createElement('h3');
+        playersTitle.innerText = `Jugador destacado: ${equipoInfo.players[0].player}`;
+        equipoContainer.appendChild(playersTitle);
+
+        // Información del jugador
+        const playerInfo = document.createElement('p');
+        playerInfo.innerText = `Puntos: ${equipoInfo.players[0].puntos}, Rebotes: ${equipoInfo.players[0].rebotes}, Asistencias: ${equipoInfo.players[0].asistencias}`;
+        equipoContainer.appendChild(playerInfo);
+    } else {
+        console.log('No hay información disponible para este equipo');
+
+        const equipoContainer = document.getElementById('team-info'); // Contenedor donde mostrar la info
+        equipoContainer.innerHTML = '';  // Limpiar el contenedor de información
     }
 
     myChart.update();
 }
+
 
 
 
@@ -69,11 +197,8 @@ function crearGrafico(equipos) {
     }
 
     const datasets = [];
-    let annotations = [];
-
     const colores = ['blue', 'orange', 'pink', 'purple', 'turquoise'];
-
-    let colorIndex = 0; //  para los colores
+    let colorIndex = 0; // para los colores
 
     for (const equipo in equipos) {
         datasets.push({
@@ -84,8 +209,7 @@ function crearGrafico(equipos) {
             pointBackgroundColor: '#D3D3D3', 
             borderColor: colores[colorIndex],
         });
-
-        colorIndex++; 
+        colorIndex++;
     }
 
     // Crear gráfico
@@ -99,62 +223,41 @@ function crearGrafico(equipos) {
             responsive: true,
             scales: {
                 x: {
-                    ticks: {
-                        autoSkip: true,
-                        maxTicksLimit: 10,
-                    },
-                    grid: {
-                        display: false,
-                    },
+                    ticks: { autoSkip: true, maxTicksLimit: 10 },
+                    grid: { display: false },
                 },
                 y: {
                     min: 95,
                     max: 130,
-                    ticks: {
-                        stepSize: false,
-                    },
-                    title: {
-                        display: true,
-                        text: 'Puntos Promedio',
-                    },
+                    title: { display: true, text: 'Puntos Promedio' },
                     beginAtZero: true,
-                    grid: {
-                        display: false,
-                    },
+                    grid: { display: false },
                 }
             },
             plugins: {
                 legend: {
                     position: 'left',
                     align: 'start',
-                    onClick: handleLegendClick, // cuando uno apreta un equipo
-                    labels: {
-                        usePointStyle: true,
-                        padding: 35, 
-                    },
+                    onClick: handleLegendClick, // evento al hacer clic en un equipo
+                    labels: { usePointStyle: true, padding: 35 },
                 },
-                annotation: {
-                    annotations: annotations,
-                },
-                tooltip: {
-                    enabled: true
-                }
+                tooltip: { enabled: true }            
             }
         }
     });
+
+
 }
 
-//  cambiar conferencia y actualizar grafico
+// Cambiar conferencia y actualizar gráfico
 document.getElementById('Conferencias').addEventListener('change', async (event) => {
     const selectedOption = event.target.value;
-    console.log(`Opción seleccionada: ${selectedOption}`);
-
     const csvData = await cargarCSV('Datasett/juegos.csv'); 
     const equipos = procesarCSV(csvData, selectedOption);
     crearGrafico(equipos);
 });
 
-// Inicializar el grafico al cargar la página
+// Inicializar el gráfico al cargar la página
 async function init() {
     const csvData = await cargarCSV('Datasett/juegos.csv'); 
     const equipos = procesarCSV(csvData, "Central");

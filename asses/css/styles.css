@@ -1,89 +1,179 @@
+/* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #C0C0C0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
     margin: 0;
-    padding: 20px;
+    padding: 0;
 }
 
+/* Contenedor principal */
 .main-container {
     display: flex;
-    gap: 20px; /* Espacio entre los contenedores */
+    gap: 20px;
     justify-content: center;
-    align-items: stretch; /* Asegura que los contenedores tengan la misma altura */
-    width: 85%; /* El main container ocupa el 80% de la página */
-    margin: auto; /* Centra el main container */
+    align-items: flex-start;
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
 }
 
+/* Contenedor del gráfico */
 .container {
-    background-color: #ececec;
-    background: white;
-    width: 70%; /* Asegura que el contenedor ocupe el 100% del espacio disponible dentro del main container */
-    height: auto;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    width: 70%;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container h1 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#myChart {
+    margin-top: 20px;
 }
 
 /* Contenedor lateral derecho */
 .side-container {
-    background-color: #ececec;
-    background: white;
-    width: 30%; /* Asegura que el contenedor ocupe el 100% del espacio disponible dentro del main container */
+    background-color: #ffffff;
+    width: 30%;
     padding: 20px;
-    height: auto;
-  
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 15px;
+}
+
+.side-container h3 {
+    font-size: 20px;
+    color: #333;
     text-align: center;
-    
-    flex: 5; /* El contenedor lateral ocupa el 30% del main container */
+    margin-bottom: 15px;
 }
 
-#myChart {
-    margin-top: -10px; /* Ajusta el valor según el espacio que necesites */
+.side-container p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+    text-align: justify;
 }
 
-h1 {
+#team-info h2 {
+    font-size: 22px;
+    color: #0073e6;
     text-align: center;
+    margin-bottom: 10px;
 }
 
+#team-info p {
+    font-size: 16px;
+    color: #333;
+    margin: 5px 0;
+}
+
+/* Estilo para el dropdown */
 .dropdown-container {
     display: flex;
-    flex-direction: column; 
-    align-items: flex-start; /* Alinear los elementos a la derecha */
-    margin-bottom: 20px; /* Espaciado entre el dropdown y el gráfico */
-    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    width: 100%;
 }
 
-label {
-    margin-bottom: 5px; /* Espacio entre el label y el select */
-    font-weight: bold;
+.dropdown-container label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
 }
 
-select {
-    padding: 5px 10px;
+.dropdown-container select {
+    padding: 8px 10px;
     font-size: 16px;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #f8f8f8;
-}
-
-/* Imagen centrada */
-.center-image {
-    margin-top: 10px;
-    max-width: 100%;
-    height: auto;
-}
-
-.team-name-container {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #f0f0f0;
     border-radius: 5px;
-    text-align: center;
     width: 100%;
-    font-weight: bold;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: border 0.3s;
+}
+
+.dropdown-container select:focus {
+    border-color: #0073e6;
+    outline: none;
+}
+
+/* Estilos para los títulos y subtítulos */
+h1 {
+    font-size: 28px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 20px;
+    color: #444;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 22px;
+    color: #333;
+    text-align: center;
+}
+
+/* Otros estilos */
+p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Efecto hover para el dropdown */
+.dropdown-container select:hover {
+    border-color: #0073e6;
+}
+
+/* Espaciado y estilo para información detallada */
+#team-info {
+    background-color: #f7f9fc;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+
+    .container,
+    .side-container {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Ocultar el control de audio si no quieres mostrar el reproductor */
+#audio {
+    display: none; /* Cambiar a 'block' si quieres que se muestre el reproductor */
 }
