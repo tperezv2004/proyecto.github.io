@@ -9,7 +9,7 @@ function reproducirSonido(volumen) {
 }
 
 function calcularVolumen(posicionY, alturaCanvas) {
-    const volumen = 1 - (posicionY / alturaCanvas)* 1.5;  
+    const volumen = 1 - (posicionY / alturaCanvas)* 0.5;  
     return Math.max(0, Math.min(volumen, 1));  
 }
 
@@ -159,7 +159,7 @@ async function handleLegendClick(e, legendItem) {
         equipoContainer.appendChild(ciudad);
 
         const puntosPorJuego = document.createElement('p');
-        puntosPorJuego.innerText = `PTS por Juego: ${equipoInfo.PTS_por_juego}`;
+        puntosPorJuego.innerText = `Promedio PTS por Juego: ${equipoInfo.PTS_por_juego}`;
         equipoContainer.appendChild(puntosPorJuego);
 
         // titulo para el jugador destacado
