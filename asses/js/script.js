@@ -1,16 +1,16 @@
-let myChart; 
+let myChart; // variable grafico
 let equipoSeleccionado = null; // equipo seleccionado
-let audioPlaying = false; // audio está sonando
+let audioPlaying = false; //  audio esta sonando
 
 function reproducirSonido(volumen) {
     audio.volume = volumen;  
-    audio.currentTime = 0;  
+    audio.currentTime = 0; 
     audio.play();
 }
 
 function calcularVolumen(posicionY, alturaCanvas) {
     const volumen = 1 - (posicionY / alturaCanvas)* 1.5;  
-    return Math.max(0, Math.min(volumen, 1));  // 
+    return Math.max(0, Math.min(volumen, 1));  
 }
 
 function agregarEventosMouse() {
@@ -20,27 +20,33 @@ function agregarEventosMouse() {
         const points = myChart.getElementsAtEventForMode(event, 'nearest', { intersect: true }, true);
         
         if (points.length) {
-            const point = points[0]; // Obtiene el primer punto seleccionado
-            const posicionY = point.element.y; // Posición Y del punto
+            const point = points[0]; 
+            const posicionY = point.element.y; 
             const alturaCanvas = canvas.clientHeight;
-            const volumen = calcularVolumen(posicionY, alturaCanvas); // Calcula el volumen
+            const volumen = calcularVolumen(posicionY, alturaCanvas); 
 
-            // Solo reproduce sonido si hay una única línea visible
+            // Solo reproduce sonido si hay una linea 
             const visibleDatasets = myChart.data.datasets.filter(dataset => !dataset.hidden);
             if (visibleDatasets.length === 1 && !audioPlaying) {
-                reproducirSonido(volumen); // Reproduce el sonido si no se está reproduciendo
+                reproducirSonido(volumen); 
                 audioPlaying = true;
             }
         } else {
             if (audioPlaying) {
-                audio.pause(); // Pausa el audio si no hay puntos bajo el mouse
+                audio.pause(); 
                 audioPlaying = false;
             }
         }
     });
 
-
+    canvas.addEventListener('mouseout', (event) => { // borrar
+        if (audioPlaying) {
+            audio.pause(); 
+            audioPlaying = false;
+        }
+    });
 }
+
 
 
 // cargar datos
@@ -59,7 +65,7 @@ function procesarCSV(data, Division) {
         if (index > 0) { 
             const [fecha, equipo, PTS, div] = linea.split(',');
         
-            // Solo equipos que están en la lista filtrada
+            // Solo equipos que estan en la lista filtrada
             if (div && div.includes(Division) && PTS) {
                 if (!equiposData[equipo]) {
                     equiposData[equipo] = { fechas: [], PTS: [] };
@@ -74,6 +80,7 @@ function procesarCSV(data, Division) {
     return equiposData;
 }
 
+// datos de los equipos
 async function procesarCSVDetalles() {
     const data = await cargarCSV('Datasett/equipos.csv')
     const lineas = data.split('\n');
@@ -81,7 +88,7 @@ async function procesarCSVDetalles() {
 
     lineas.forEach((linea, index) => {
         if (index > 0) {
-            const [equipo, campeonatos, ciudad, posicion, conferencia,PTS_por_juego, player, puntos, rebotes, asistencias] = linea.split(',');
+            const [equipo, campeonatos, ciudad, posicion, conferencia, PTS_por_juego, player, puntos, rebotes, asistencias] = linea.split(',');
 
             // Guardamos los detalles de cada equipo
             if (equipo) {
@@ -112,6 +119,7 @@ async function procesarCSVDetalles() {
 async function handleLegendClick(e, legendItem) {
     const index = legendItem.datasetIndex;
     equipoSeleccionado = myChart.data.datasets[index].label; // Guarda el equipo seleccionado
+
     // Agregar eventos de mouse
     const allHidden = myChart.data.datasets.every(dataset => dataset.hidden || dataset === myChart.data.datasets[index]);
 
@@ -124,18 +132,18 @@ async function handleLegendClick(e, legendItem) {
             dataset.hidden = true;
         });
         myChart.data.datasets[index].hidden = false;
+
         agregarEventosMouse();
     }
-    
-    // Cargar los detalles de los equipos
+
     const equiposDetalles = await procesarCSVDetalles();
 
     // Verificar si el equipo existe en los detalles
-    if (equiposDetalles[equipoSeleccionado] && allHidden == false) {
+    if (equiposDetalles[equipoSeleccionado] && !allHidden) {
+        
         const equipoInfo = equiposDetalles[equipoSeleccionado];  // Detalles del equipo
 
-        // Actualizar la información del equipo en el DOM
-        const equipoContainer = document.getElementById('team-info'); // Contenedor donde mostrar la info
+        const equipoContainer = document.getElementById('team-info'); // Contenedor donde esta la info
         equipoContainer.innerHTML = '';  // Limpiar el contenedor de información
 
         const nombreEquipo = document.createElement('h2');
@@ -150,34 +158,29 @@ async function handleLegendClick(e, legendItem) {
         ciudad.innerText = `Ciudad: ${equipoInfo.ciudad}`;
         equipoContainer.appendChild(ciudad);
 
-        const posicion = document.createElement('p');
-        posicion.innerText = `Posición: ${equipoInfo.posicion}`;
-        equipoContainer.appendChild(posicion);
-
         const puntosPorJuego = document.createElement('p');
         puntosPorJuego.innerText = `PTS por Juego: ${equipoInfo.PTS_por_juego}`;
         equipoContainer.appendChild(puntosPorJuego);
 
-        // Título para el jugador destacado
+        // titulo para el jugador destacado
         const playersTitle = document.createElement('h3');
         playersTitle.innerText = `Jugador destacado: ${equipoInfo.players[0].player}`;
         equipoContainer.appendChild(playersTitle);
 
         // Información del jugador
         const playerInfo = document.createElement('p');
-        playerInfo.innerText = `Puntos: ${equipoInfo.players[0].puntos}, Rebotes: ${equipoInfo.players[0].rebotes}, Asistencias: ${equipoInfo.players[0].asistencias}`;
+        playerInfo.innerText = `Puntos: ${equipoInfo.players[0].puntos} Rebotes: ${equipoInfo.players[0].rebotes} Asistencias: ${equipoInfo.players[0].asistencias}`;
         equipoContainer.appendChild(playerInfo);
-    
+
     } else {
         console.log('No hay información disponible para este equipo');
 
-        const equipoContainer = document.getElementById('team-info'); // Contenedor donde mostrar la info
-        equipoContainer.innerHTML = '';  // Limpiar el contenedor de información
+        const equipoContainer = document.getElementById('team-info');
+        equipoContainer.innerHTML = '';  
     }
 
     myChart.update();
 }
-
 
 
 
@@ -205,7 +208,6 @@ function crearGrafico(equipos) {
         colorIndex++;
     }
 
-    // Crear grafico
     myChart = new Chart(ctx, {
         type: 'line',
         data: {
@@ -214,10 +216,16 @@ function crearGrafico(equipos) {
         },
         options: {
             responsive: true,
+            animation: { // IMPRORTANTE
+                duration: 1000, // Tiempo de animación (1 segundo)
+                easing: 'easeInOutQuad', // Tipo de animación
+            },
             scales: {
                 x: {
                     ticks: { autoSkip: true, maxTicksLimit: 10 },
                     grid: { display: false },
+                    borderColor: 'black',  
+                    borderWidth: 1, 
                 },
                 y: {
                     min: 95,
@@ -225,6 +233,8 @@ function crearGrafico(equipos) {
                     title: { display: true, text: 'Puntos Promedio' },
                     beginAtZero: true,
                     grid: { display: false },
+                    borderColor: 'black',  // Cambiar el color de la linea del eje Y
+                    borderWidth: 1, // Ajusta el grosor de la linea del eje Y
                 }
             },
             plugins: {
@@ -238,9 +248,9 @@ function crearGrafico(equipos) {
             }
         }
     });
-
-
+    
 }
+
 
 // Cambiar conferencia y actualizar grafico
 document.getElementById('Conferencias').addEventListener('change', async (event) => {
@@ -248,13 +258,13 @@ document.getElementById('Conferencias').addEventListener('change', async (event)
     const csvData = await cargarCSV('Datasett/juegos.csv'); 
     const equipos = procesarCSV(csvData, selectedOption);
 
-    const equipoContainer = document.getElementById('team-info'); // Contenedor donde mostrar la info
-    equipoContainer.innerHTML = '';  // Limpiar el contenedor de información
-    
+    const equipoContainer = document.getElementById('team-info'); 
+    equipoContainer.innerHTML = '';  
+
     crearGrafico(equipos);
 });
 
-// Inicializar el grafico al cargar la página
+// Inicializar el grafico
 async function init() {
     const csvData = await cargarCSV('Datasett/juegos.csv'); 
     const equipos = procesarCSV(csvData, "Central");
