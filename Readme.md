@@ -2,7 +2,7 @@
 
 [**PÁGINA WEB**](https://tperezv2004.github.io/proyecto.github.io/)
 
-[**VIDEO**](https://drive.google.com/file/d/1VzqxBi6_-chSD-9BeAAwIHxOf-bAiTOL/view)
+[**VIDEO**](https://drive.google.com/file/d/1rgezX-UFYN0aXpxYoggV-7kdbK7mzOvd/view)
 
 ## Entrega 1
 
