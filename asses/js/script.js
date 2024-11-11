@@ -9,7 +9,8 @@ function reproducirSonido(volumen) {
 }
 
 function calcularVolumen(posicionY, alturaCanvas) {
-    const volumen = 1 - (posicionY / alturaCanvas)* 0.5;  
+    const volumen = 1 - (posicionY / alturaCanvas);  
+    console.log(volumen);
     return Math.max(0, Math.min(volumen, 1));  
 }
 
