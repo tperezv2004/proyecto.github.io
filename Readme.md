@@ -6,15 +6,8 @@
 
 ### Cosas por hacer:
 1. Escribir informe.
-
-### Gráficos Propuestos: (PODEMOS CAMBIAR DE GRAFICO)
-- **Gráfico de líneas**: Puntos encestados por equipo por años. (GRAFICO A USAR)
-- **Gráfico de torta**: Campeonatos ganados.
-- **Gráfico de barra**: Puntos encestados en una temporada. 
-- Podemos agregar mas graficos
-
-### Ideas:
-1. Ordenar carpeta Datasett
+2. Cambiar diseño pagina para que se vea mejor?
+3. Cambiar texto del container derecho
 
 ## Datasets:
 1. [NBA Player Stats 2023-2024 - Kaggle](https://www.kaggle.com/datasets/vivovinco/2023-2024-nba-player-stats?select=2023-2024+NBA+Player+Stats+-+Regular.csv)
