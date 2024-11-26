@@ -6,7 +6,7 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
-    background-image: url("../../imagenes/imagen7.png"); /* Ruta a la imagen */
+    background-image: url("../../imagenes/fondo.png"); /* Ruta a la imagen */
     background-size: cover; /* Hace que la imagen cubra toda la pantalla */
     background-position: center; /* Centra la imagen */
     background-attachment: fixed; /* Hace que la imagen se quede fija cuando se hace scroll */
