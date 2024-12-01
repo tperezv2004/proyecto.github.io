@@ -24,6 +24,7 @@ body {
     padding: 20px;
 }
 
+
 /* Contenedor del gráfico */
 .container {
     background-color: rgba(255, 255, 255, 0.95); /* Transparencia ligera */
@@ -88,7 +89,7 @@ body {
 
 #team-info h2 {
     font-size: 22px;
-    color: #0073e6;
+    color: #1a73e8; /* aca*/
     text-align: center;
     margin-bottom: 10px;
 }
@@ -194,4 +195,27 @@ p {
 /* Ocultar el control de audio si no quieres mostrar el reproductor */
 #audio {
     display: none;
+}
+
+
+/* Ajustar la posición del texto y botón más arriba */
+#camara-equipo {
+    margin-left: 5%; /* Mueve el botón hacia la izquierda (ajusta el valor según sea necesario) */
+    margin-top: -10%; /* Mover el texto más arriba (ajusta el valor según sea necesario) */
+    font-size: 16px; /* Ajustar el tamaño de la fuente si es necesario */
+}
+
+.boton {
+    margin-left: 5%; /* Mueve el botón hacia la izquierda (ajusta el valor según sea necesario) */
+    margin-top: 5%; /* Mueve el botón hacia arriba */
+    padding: 10px 15px;
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    position: relative; /* Asegura que el botón pueda ser movido con `margin` */
+}
+
+.boton:hover {
+    background-color: #0056b3;
 }

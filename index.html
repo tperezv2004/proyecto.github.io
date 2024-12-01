@@ -4,12 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="asses/css/styles.css">
+    
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/handpose"></script>
+    
     <title>Proyecto info vis</title>
 </head>
+
 <body>
+
     <div class="main-container">
+        
         <!-- Contenedor grande -->
         <div class="container">
             <h1>Promedio Mensual de Puntos en la Temporada 2023-2024 de la NBA</h1>
@@ -25,30 +32,32 @@
                 </select>
             </div>
             <canvas id="myChart" width="800" height="400"></canvas>
+            
+
+            <div id="camara-equipo">
+            
+            </div>
+
+            <button class="boton" id="startButton">Presióname</button>
+
         </div>
 
-            <!-- Contenedor derecho -->
+        <!-- Contenedor derecho -->
         <div class="side-container">
             <div id="left-info">
                 <h3>Análisis del Desempeño de Equipos</h3>
                     
-                <p> Por cada conferencia hay un grafico que compara los PTS promedios de los equipos. 
-                    Al seleccionar un equipo, se destaca su trayectoria, se muestran sus detalles
-                    y su jugador estrella. Además, al pasar sobre un punto en el gráfico, su altura determina la intensidad de los aplausos: cuanto más alto el punto, más fuertes suenan los aplausos.</p>
+                <p> 
+                    Por cada conferencia, un gráfico compara los PTS promedios de los equipos. Al seleccionar un equipo, se destacan su trayectoria, detalles y jugador estrella. Al pasar sobre un punto, su altura indica la cantidad de aplausos: más alto, más aplausos; más bajo, menos.
+                    Además, un botón activa la cámara: acercar la mano muestra el mejor equipo y alejarla, el peor.
+                </p>
             </div>
-            
             
             <!-- Contenedor para mostrar la información detallada del equipo -->
             <div id="team-info"></div>
-        </div>
-            
-    </div>
-    <!-- Agregar el elemento de audio -->
-    <audio id="audio" controls>
-        <source src="audio/aplausos.mp4" type="audio/mp3">
-        Tu navegador no soporta el elemento de audio.
-    </audio>
+        </div>   
 
+    </div>
     
     
     <script src="asses/js/script.js"></script>

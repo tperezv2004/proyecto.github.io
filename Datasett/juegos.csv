@@ -1,211 +1,211 @@
-fecha,equipo,PTS,Division
-2023-10,Atlanta Hawks,121,Sudeste
-2023-10,Washington Wizards,113,Sudeste
-2023-10,Utah Jazz,110,Noroeste
-2023-10,Toronto Raptors,99,Atlantico
-2023-10,San Antonio Spurs,110,Sudoeste
-2023-10,Sacramento Kings,125,Pacifico
-2023-10,Portland Trail Blazers,101,Noroeste
-2023-10,Phoenix Suns,110,Pacifico
-2023-10,Orlando Magic,105,Sudeste
-2023-10,Oklahoma City Thunder,112,Noroeste
-2023-10,New York Knicks,106,Atlantico
-2023-10,New Orleans Pelicans,103,Sudoeste
-2023-10,Minnesota Timberwolves,104,Noroeste
-2023-10,Milwaukee Bucks,116,Central
-2023-10,Philadelphia 76ers,119,Atlantico
-2023-10,Memphis Grizzlies,106,Sudoeste
-2023-10,Miami Heat,104,Sudeste
-2023-10,Brooklyn Nets,122,Atlantico
-2023-10,Charlotte Hornets,112,Sudeste
-2023-10,Chicago Bulls,105,Central
-2023-10,Cleveland Cavaliers,105,Central
-2023-10,Dallas Mavericks,125,Sudoeste
-2023-10,Denver Nuggets,116,Noroeste
-2023-10,Boston Celtics,117,Atlantico
-2023-10,Golden State Warriors,115,Pacifico
-2023-10,Houston Rockets,101,Sudoeste
-2023-10,Indiana Pacers,124,Central
-2023-10,Los Angeles Clippers,120,Pacifico
-2023-10,Los Angeles Lakers,110,Pacifico
-2023-10,Detroit Pistons,110,Central
-2023-11,Minnesota Timberwolves,113,Noroeste
-2023-11,New Orleans Pelicans,115,Sudoeste
-2023-11,New York Knicks,111,Atlantico
-2023-11,Oklahoma City Thunder,121,Noroeste
-2023-11,Orlando Magic,116,Sudeste
-2023-11,Phoenix Suns,118,Pacifico
-2023-11,Toronto Raptors,114,Atlantico
-2023-11,Sacramento Kings,114,Pacifico
-2023-11,San Antonio Spurs,112,Sudoeste
-2023-11,Utah Jazz,112,Noroeste
-2023-11,Washington Wizards,116,Sudeste
-2023-11,Portland Trail Blazers,105,Noroeste
-2023-11,Milwaukee Bucks,121,Central
-2023-11,Philadelphia 76ers,120,Atlantico
-2023-11,Memphis Grizzlies,105,Sudoeste
-2023-11,Brooklyn Nets,114,Atlantico
-2023-11,Charlotte Hornets,114,Sudeste
-2023-11,Chicago Bulls,107,Central
-2023-11,Cleveland Cavaliers,112,Central
-2023-11,Dallas Mavericks,118,Sudoeste
-2023-11,Denver Nuggets,113,Noroeste
-2023-11,Boston Celtics,116,Atlantico
-2023-11,Atlanta Hawks,123,Sudeste
-2023-11,Detroit Pistons,109,Central
-2023-11,Los Angeles Lakers,113,Pacifico
-2023-11,Los Angeles Clippers,110,Pacifico
-2023-11,Miami Heat,114,Sudeste
-2023-11,Houston Rockets,113,Sudoeste
-2023-11,Golden State Warriors,114,Pacifico
-2023-11,Indiana Pacers,128,Central
-2023-12,New Orleans Pelicans,119,Sudoeste
-2023-12,New York Knicks,121,Atlantico
-2023-12,Oklahoma City Thunder,123,Noroeste
-2023-12,Orlando Magic,111,Sudeste
-2023-12,Philadelphia 76ers,122,Atlantico
-2023-12,Phoenix Suns,114,Pacifico
-2023-12,Portland Trail Blazers,115,Noroeste
-2023-12,San Antonio Spurs,110,Sudoeste
-2023-12,Utah Jazz,115,Noroeste
-2023-12,Washington Wizards,117,Sudeste
-2023-12,Minnesota Timberwolves,114,Noroeste
-2023-12,Sacramento Kings,119,Pacifico
-2023-12,Toronto Raptors,116,Atlantico
-2023-12,Miami Heat,114,Sudeste
-2023-12,Memphis Grizzlies,108,Sudoeste
-2023-12,Atlanta Hawks,120,Sudeste
-2023-12,Milwaukee Bucks,129,Central
-2023-12,Brooklyn Nets,115,Atlantico
-2023-12,Charlotte Hornets,106,Sudeste
-2023-12,Chicago Bulls,114,Central
-2023-12,Cleveland Cavaliers,113,Central
-2023-12,Dallas Mavericks,118,Sudoeste
-2023-12,Boston Celtics,126,Atlantico
-2023-12,Detroit Pistons,111,Central
-2023-12,Golden State Warriors,119,Pacifico
-2023-12,Houston Rockets,113,Sudoeste
-2023-12,Indiana Pacers,123,Central
-2023-12,Los Angeles Clippers,121,Pacifico
-2023-12,Los Angeles Lakers,116,Pacifico
-2023-12,Denver Nuggets,116,Noroeste
-2024-01,New York Knicks,115,Atlantico
-2024-01,Oklahoma City Thunder,118,Noroeste
-2024-01,Orlando Magic,109,Sudeste
-2024-01,Philadelphia 76ers,114,Atlantico
-2024-01,Phoenix Suns,119,Pacifico
-2024-01,Utah Jazz,126,Noroeste
-2024-01,Sacramento Kings,119,Pacifico
-2024-01,Toronto Raptors,116,Atlantico
-2024-01,Washington Wizards,111,Sudeste
-2024-01,New Orleans Pelicans,117,Sudoeste
-2024-01,Portland Trail Blazers,106,Noroeste
-2024-01,Minnesota Timberwolves,112,Noroeste
-2024-01,San Antonio Spurs,115,Sudoeste
-2024-01,Miami Heat,104,Sudeste
-2024-01,Atlanta Hawks,117,Sudeste
-2024-01,Boston Celtics,119,Atlantico
-2024-01,Charlotte Hornets,104,Sudeste
-2024-01,Chicago Bulls,113,Central
-2024-01,Cleveland Cavaliers,120,Central
-2024-01,Dallas Mavericks,116,Sudoeste
-2024-01,Milwaukee Bucks,121,Central
-2024-01,Brooklyn Nets,110,Atlantico
-2024-01,Detroit Pistons,117,Central
-2024-01,Golden State Warriors,123,Pacifico
-2024-01,Houston Rockets,115,Sudoeste
-2024-01,Indiana Pacers,121,Central
-2024-01,Los Angeles Clippers,121,Pacifico
-2024-01,Los Angeles Lakers,120,Pacifico
-2024-01,Memphis Grizzlies,109,Sudoeste
-2024-01,Denver Nuggets,113,Noroeste
-2024-02,Oklahoma City Thunder,124,Noroeste
-2024-02,Orlando Magic,110,Sudeste
-2024-02,Philadelphia 76ers,109,Atlantico
-2024-02,Phoenix Suns,119,Pacifico
-2024-02,Portland Trail Blazers,100,Noroeste
-2024-02,Utah Jazz,117,Noroeste
-2024-02,San Antonio Spurs,111,Sudoeste
-2024-02,Toronto Raptors,115,Atlantico
-2024-02,Washington Wizards,113,Sudeste
-2024-02,New York Knicks,106,Atlantico
-2024-02,Sacramento Kings,118,Pacifico
-2024-02,New Orleans Pelicans,114,Sudoeste
-2024-02,Milwaukee Bucks,112,Central
-2024-02,Brooklyn Nets,104,Atlantico
-2024-02,Atlanta Hawks,121,Sudeste
-2024-02,Boston Celtics,122,Atlantico
-2024-02,Minnesota Timberwolves,115,Noroeste
-2024-02,Charlotte Hornets,103,Sudeste
-2024-02,Chicago Bulls,116,Central
-2024-02,Cleveland Cavaliers,115,Central
-2024-02,Denver Nuggets,112,Noroeste
-2024-02,Dallas Mavericks,121,Sudoeste
-2024-02,Golden State Warriors,120,Pacifico
-2024-02,Houston Rockets,109,Sudoeste
-2024-02,Indiana Pacers,120,Central
-2024-02,Los Angeles Clippers,114,Pacifico
-2024-02,Los Angeles Lakers,121,Pacifico
-2024-02,Memphis Grizzlies,102,Sudoeste
-2024-02,Miami Heat,110,Sudeste
-2024-02,Detroit Pistons,112,Central
-2024-03,Phoenix Suns,114,Pacifico
-2024-03,Orlando Magic,106,Sudeste
-2024-03,Philadelphia 76ers,105,Atlantico
-2024-03,Portland Trail Blazers,107,Noroeste
-2024-03,New York Knicks,108,Atlantico
-2024-03,San Antonio Spurs,111,Sudoeste
-2024-03,Toronto Raptors,105,Atlantico
-2024-03,Utah Jazz,111,Noroeste
-2024-03,Washington Wizards,108,Sudeste
-2024-03,Sacramento Kings,114,Pacifico
-2024-03,New Orleans Pelicans,111,Sudoeste
-2024-03,Oklahoma City Thunder,117,Noroeste
-2024-03,Milwaukee Bucks,114,Central
-2024-03,Minnesota Timberwolves,110,Noroeste
-2024-03,Chicago Bulls,112,Central
-2024-03,Charlotte Hornets,101,Sudeste
-2024-03,Brooklyn Nets,107,Atlantico
-2024-03,Atlanta Hawks,112,Sudeste
-2024-03,Cleveland Cavaliers,105,Central
-2024-03,Dallas Mavericks,117,Sudoeste
-2024-03,Denver Nuggets,115,Noroeste
-2024-03,Boston Celtics,121,Atlantico
-2024-03,Golden State Warriors,113,Pacifico
-2024-03,Houston Rockets,119,Sudoeste
-2024-03,Miami Heat,108,Sudeste
-2024-03,Indiana Pacers,118,Central
-2024-03,Los Angeles Clippers,112,Pacifico
-2024-03,Los Angeles Lakers,119,Pacifico
-2024-03,Memphis Grizzlies,103,Sudoeste
-2024-03,Detroit Pistons,103,Central
-2024-04,Orlando Magic,106,Sudeste
-2024-04,Philadelphia 76ers,112,Atlantico
-2024-04,Phoenix Suns,109,Pacifico
-2024-04,Portland Trail Blazers,98,Noroeste
-2024-04,Utah Jazz,110,Noroeste
-2024-04,San Antonio Spurs,111,Sudoeste
-2024-04,Toronto Raptors,109,Atlantico
-2024-04,Washington Wizards,118,Sudeste
-2024-04,New York Knicks,111,Atlantico
-2024-04,Sacramento Kings,109,Pacifico
-2024-04,New Orleans Pelicans,105,Sudoeste
-2024-04,Oklahoma City Thunder,113,Noroeste
-2024-04,Milwaukee Bucks,108,Central
-2024-04,Cleveland Cavaliers,105,Central
-2024-04,Minnesota Timberwolves,115,Noroeste
-2024-04,Chicago Bulls,113,Central
-2024-04,Charlotte Hornets,108,Sudeste
-2024-04,Brooklyn Nets,102,Atlantico
-2024-04,Boston Celtics,113,Atlantico
-2024-04,Atlanta Hawks,111,Sudeste
-2024-04,Denver Nuggets,114,Noroeste
-2024-04,Dallas Mavericks,107,Sudoeste
-2024-04,Golden State Warriors,113,Pacifico
-2024-04,Houston Rockets,115,Sudoeste
-2024-04,Indiana Pacers,121,Central
-2024-04,Los Angeles Clippers,106,Pacifico
-2024-04,Los Angeles Lakers,115,Pacifico
-2024-04,Memphis Grizzlies,105,Sudoeste
-2024-04,Miami Heat,106,Sudeste
-2024-04,Detroit Pistons,102,Central
+fecha,equipo,PTS,Division,pos
+2023-10,Atlanta Hawks,121,Sudeste,1
+2023-10,Washington Wizards,113,Sudeste,0
+2023-10,Utah Jazz,110,Noroeste,0
+2023-10,Toronto Raptors,99,Atlantico,0
+2023-10,San Antonio Spurs,110,Sudoeste,0
+2023-10,Sacramento Kings,125,Pacifico,1
+2023-10,Portland Trail Blazers,101,Noroeste,-1
+2023-10,Phoenix Suns,110,Pacifico,-1
+2023-10,Orlando Magic,105,Sudeste,0
+2023-10,Oklahoma City Thunder,112,Noroeste,1
+2023-10,New York Knicks,106,Atlantico,0
+2023-10,New Orleans Pelicans,103,Sudoeste,0
+2023-10,Minnesota Timberwolves,104,Noroeste,0
+2023-10,Milwaukee Bucks,116,Central,0
+2023-10,Philadelphia 76ers,119,Atlantico,0
+2023-10,Memphis Grizzlies,106,Sudoeste,-1
+2023-10,Miami Heat,104,Sudeste,0
+2023-10,Brooklyn Nets,122,Atlantico,-1
+2023-10,Charlotte Hornets,112,Sudeste,-1
+2023-10,Chicago Bulls,105,Central,0
+2023-10,Cleveland Cavaliers,105,Central,0
+2023-10,Dallas Mavericks,125,Sudoeste,1
+2023-10,Denver Nuggets,116,Noroeste,0
+2023-10,Boston Celtics,117,Atlantico,1
+2023-10,Golden State Warriors,115,Pacifico,0
+2023-10,Houston Rockets,101,Sudoeste,0
+2023-10,Indiana Pacers,124,Central,1
+2023-10,Los Angeles Clippers,120,Pacifico,0
+2023-10,Los Angeles Lakers,110,Pacifico,0
+2023-10,Detroit Pistons,110,Central,-1
+2023-11,Minnesota Timberwolves,113,Noroeste,0
+2023-11,New Orleans Pelicans,115,Sudoeste,0
+2023-11,New York Knicks,111,Atlantico,0
+2023-11,Oklahoma City Thunder,121,Noroeste,1
+2023-11,Orlando Magic,116,Sudeste,0
+2023-11,Phoenix Suns,118,Pacifico,-1
+2023-11,Toronto Raptors,114,Atlantico,0
+2023-11,Sacramento Kings,114,Pacifico,1
+2023-11,San Antonio Spurs,112,Sudoeste,0
+2023-11,Utah Jazz,112,Noroeste,0
+2023-11,Washington Wizards,116,Sudeste,0
+2023-11,Portland Trail Blazers,105,Noroeste,-1
+2023-11,Milwaukee Bucks,121,Central,0
+2023-11,Philadelphia 76ers,120,Atlantico,0
+2023-11,Memphis Grizzlies,105,Sudoeste,-1
+2023-11,Brooklyn Nets,114,Atlantico,-1
+2023-11,Charlotte Hornets,114,Sudeste,-1
+2023-11,Chicago Bulls,107,Central,0
+2023-11,Cleveland Cavaliers,112,Central,0
+2023-11,Dallas Mavericks,118,Sudoeste,1
+2023-11,Denver Nuggets,113,Noroeste,0
+2023-11,Boston Celtics,116,Atlantico,1
+2023-11,Atlanta Hawks,123,Sudeste,1
+2023-11,Detroit Pistons,109,Central,-1
+2023-11,Los Angeles Lakers,113,Pacifico,0
+2023-11,Los Angeles Clippers,110,Pacifico,0
+2023-11,Miami Heat,114,Sudeste,0
+2023-11,Houston Rockets,113,Sudoeste,0
+2023-11,Golden State Warriors,114,Pacifico,0
+2023-11,Indiana Pacers,128,Central,1
+2023-12,New Orleans Pelicans,119,Sudoeste,0
+2023-12,New York Knicks,121,Atlantico,0
+2023-12,Oklahoma City Thunder,123,Noroeste,1
+2023-12,Orlando Magic,111,Sudeste,0
+2023-12,Philadelphia 76ers,122,Atlantico,0
+2023-12,Phoenix Suns,114,Pacifico,-1
+2023-12,Portland Trail Blazers,115,Noroeste,-1
+2023-12,San Antonio Spurs,110,Sudoeste,0
+2023-12,Utah Jazz,115,Noroeste,0
+2023-12,Washington Wizards,117,Sudeste,0
+2023-12,Minnesota Timberwolves,114,Noroeste,0
+2023-12,Sacramento Kings,119,Pacifico,1
+2023-12,Toronto Raptors,116,Atlantico,0
+2023-12,Miami Heat,114,Sudeste,0
+2023-12,Memphis Grizzlies,108,Sudoeste,-1
+2023-12,Atlanta Hawks,120,Sudeste,1
+2023-12,Milwaukee Bucks,129,Central,0
+2023-12,Brooklyn Nets,115,Atlantico,-1
+2023-12,Charlotte Hornets,106,Sudeste,-1
+2023-12,Chicago Bulls,114,Central,0
+2023-12,Cleveland Cavaliers,113,Central,0
+2023-12,Dallas Mavericks,118,Sudoeste,1
+2023-12,Boston Celtics,126,Atlantico,1
+2023-12,Detroit Pistons,111,Central,-1
+2023-12,Golden State Warriors,119,Pacifico,0
+2023-12,Houston Rockets,113,Sudoeste,0
+2023-12,Indiana Pacers,123,Central,1
+2023-12,Los Angeles Clippers,121,Pacifico,0
+2023-12,Los Angeles Lakers,116,Pacifico,0
+2023-12,Denver Nuggets,116,Noroeste,0
+2024-01,New York Knicks,115,Atlantico,0
+2024-01,Oklahoma City Thunder,118,Noroeste,1
+2024-01,Orlando Magic,109,Sudeste,0
+2024-01,Philadelphia 76ers,114,Atlantico,0
+2024-01,Phoenix Suns,119,Pacifico,-1
+2024-01,Utah Jazz,126,Noroeste,0
+2024-01,Sacramento Kings,119,Pacifico,1
+2024-01,Toronto Raptors,116,Atlantico,0
+2024-01,Washington Wizards,111,Sudeste,0
+2024-01,New Orleans Pelicans,117,Sudoeste,0
+2024-01,Portland Trail Blazers,106,Noroeste,-1
+2024-01,Minnesota Timberwolves,112,Noroeste,0
+2024-01,San Antonio Spurs,115,Sudoeste,0
+2024-01,Miami Heat,104,Sudeste,0
+2024-01,Atlanta Hawks,117,Sudeste,1
+2024-01,Boston Celtics,119,Atlantico,1
+2024-01,Charlotte Hornets,104,Sudeste,-1
+2024-01,Chicago Bulls,113,Central,0
+2024-01,Cleveland Cavaliers,120,Central,0
+2024-01,Dallas Mavericks,116,Sudoeste,1
+2024-01,Milwaukee Bucks,121,Central,0
+2024-01,Brooklyn Nets,110,Atlantico,-1
+2024-01,Detroit Pistons,117,Central,-1
+2024-01,Golden State Warriors,123,Pacifico,0
+2024-01,Houston Rockets,115,Sudoeste,0
+2024-01,Indiana Pacers,121,Central,1
+2024-01,Los Angeles Clippers,121,Pacifico,0
+2024-01,Los Angeles Lakers,120,Pacifico,0
+2024-01,Memphis Grizzlies,109,Sudoeste,-1
+2024-01,Denver Nuggets,113,Noroeste,0
+2024-02,Oklahoma City Thunder,124,Noroeste,1
+2024-02,Orlando Magic,110,Sudeste,0
+2024-02,Philadelphia 76ers,109,Atlantico,0
+2024-02,Phoenix Suns,119,Pacifico,-1
+2024-02,Portland Trail Blazers,100,Noroeste,-1
+2024-02,Utah Jazz,117,Noroeste,0
+2024-02,San Antonio Spurs,111,Sudoeste,0
+2024-02,Toronto Raptors,115,Atlantico,0
+2024-02,Washington Wizards,113,Sudeste,0
+2024-02,New York Knicks,106,Atlantico,0
+2024-02,Sacramento Kings,118,Pacifico,1
+2024-02,New Orleans Pelicans,114,Sudoeste,0
+2024-02,Milwaukee Bucks,112,Central,0
+2024-02,Brooklyn Nets,104,Atlantico,-1
+2024-02,Atlanta Hawks,121,Sudeste,1
+2024-02,Boston Celtics,122,Atlantico,1
+2024-02,Minnesota Timberwolves,115,Noroeste,0
+2024-02,Charlotte Hornets,103,Sudeste,-1
+2024-02,Chicago Bulls,116,Central,0
+2024-02,Cleveland Cavaliers,115,Central,0
+2024-02,Denver Nuggets,112,Noroeste,0
+2024-02,Dallas Mavericks,121,Sudoeste,1
+2024-02,Golden State Warriors,120,Pacifico,0
+2024-02,Houston Rockets,109,Sudoeste,0
+2024-02,Indiana Pacers,120,Central,1
+2024-02,Los Angeles Clippers,114,Pacifico,0
+2024-02,Los Angeles Lakers,121,Pacifico,0
+2024-02,Memphis Grizzlies,102,Sudoeste,-1
+2024-02,Miami Heat,110,Sudeste,0
+2024-02,Detroit Pistons,112,Central,-1
+2024-03,Phoenix Suns,114,Pacifico,-1
+2024-03,Orlando Magic,106,Sudeste,0
+2024-03,Philadelphia 76ers,105,Atlantico,0
+2024-03,Portland Trail Blazers,107,Noroeste,-1
+2024-03,New York Knicks,108,Atlantico,0
+2024-03,San Antonio Spurs,111,Sudoeste,0
+2024-03,Toronto Raptors,105,Atlantico,0
+2024-03,Utah Jazz,111,Noroeste,0
+2024-03,Washington Wizards,108,Sudeste,0
+2024-03,Sacramento Kings,114,Pacifico,1
+2024-03,New Orleans Pelicans,111,Sudoeste,0
+2024-03,Oklahoma City Thunder,117,Noroeste,1
+2024-03,Milwaukee Bucks,114,Central,0
+2024-03,Minnesota Timberwolves,110,Noroeste,0
+2024-03,Chicago Bulls,112,Central,0
+2024-03,Charlotte Hornets,101,Sudeste,-1
+2024-03,Brooklyn Nets,107,Atlantico,-1
+2024-03,Atlanta Hawks,112,Sudeste,1
+2024-03,Cleveland Cavaliers,105,Central,0
+2024-03,Dallas Mavericks,117,Sudoeste,1
+2024-03,Denver Nuggets,115,Noroeste,0
+2024-03,Boston Celtics,121,Atlantico,1
+2024-03,Golden State Warriors,113,Pacifico,0
+2024-03,Houston Rockets,119,Sudoeste,0
+2024-03,Miami Heat,108,Sudeste,0
+2024-03,Indiana Pacers,118,Central,1
+2024-03,Los Angeles Clippers,112,Pacifico,0
+2024-03,Los Angeles Lakers,119,Pacifico,0
+2024-03,Memphis Grizzlies,103,Sudoeste,-1
+2024-03,Detroit Pistons,103,Central,-1
+2024-04,Orlando Magic,106,Sudeste,0
+2024-04,Philadelphia 76ers,112,Atlantico,0
+2024-04,Phoenix Suns,109,Pacifico,-1
+2024-04,Portland Trail Blazers,98,Noroeste,-1
+2024-04,Utah Jazz,110,Noroeste,0
+2024-04,San Antonio Spurs,111,Sudoeste,0
+2024-04,Toronto Raptors,109,Atlantico,0
+2024-04,Washington Wizards,118,Sudeste,0
+2024-04,New York Knicks,111,Atlantico,0
+2024-04,Sacramento Kings,109,Pacifico,1
+2024-04,New Orleans Pelicans,105,Sudoeste,0
+2024-04,Oklahoma City Thunder,113,Noroeste,1
+2024-04,Milwaukee Bucks,108,Central,0
+2024-04,Cleveland Cavaliers,105,Central,0
+2024-04,Minnesota Timberwolves,115,Noroeste,0
+2024-04,Chicago Bulls,113,Central,0
+2024-04,Charlotte Hornets,108,Sudeste,-1
+2024-04,Brooklyn Nets,102,Atlantico,-1
+2024-04,Boston Celtics,113,Atlantico,1
+2024-04,Atlanta Hawks,111,Sudeste,1
+2024-04,Denver Nuggets,114,Noroeste,0
+2024-04,Dallas Mavericks,107,Sudoeste,1
+2024-04,Golden State Warriors,113,Pacifico,0
+2024-04,Houston Rockets,115,Sudoeste,0
+2024-04,Indiana Pacers,121,Central,1
+2024-04,Los Angeles Clippers,106,Pacifico,0
+2024-04,Los Angeles Lakers,115,Pacifico,0
+2024-04,Memphis Grizzlies,105,Sudoeste,-1
+2024-04,Miami Heat,106,Sudeste,0
+2024-04,Detroit Pistons,102,Central,-1
