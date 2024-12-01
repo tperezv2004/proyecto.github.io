@@ -447,7 +447,7 @@ startButton.addEventListener('click', async () => { // Cambiado a async
                     audioPlaying = null; 
                 }
             }
-            
+
             crearGrafico(equipos, 0);
         }
 
@@ -463,7 +463,7 @@ window.updateDistance = async function (distacia) {
     console.log(conferencia);
     equipoContainer.innerHTML = '';  
 
-    if (distacia < 250 && ejecucionCamara != "peor") { // peor equipo
+    if (distacia <= 250 && ejecucionCamara != "peor") { // peor equipo
         crearGrafico(equipos, - 1);
         ejecucionCamara = "peor";
 
