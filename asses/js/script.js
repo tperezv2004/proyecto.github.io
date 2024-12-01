@@ -1,8 +1,13 @@
 let myChart; // variable grafico
 let equipoSeleccionado = null; // equipo seleccionado
-let audioPlaying = false; //  audio esta sonando
 let conferencia = ""; // conferencia seleccionada
 let ejecucionCamara = ""; // camara ejecutandose
+let audioPlaying = null; // Para rastrear el audio en reproducción
+
+
+const mejorEquipo = new Audio('audio/mejorEquipo.mp4');
+const peorEquipo = new Audio('audio/peorEquipo.mp4');
+
 
 const startButton = document.getElementById('startButton');
 let cam = document.getElementById('camara-equipo');
@@ -169,7 +174,6 @@ function agregarEventosMouse() {
         new Audio('audio/audio6.mp4'),
         new Audio('audio/audio7.mp4')  
     ];
-    let audioPlaying = null; // Para rastrear el audio en reproducción
 
     canvas.addEventListener('mousemove', (event) => {
         const points = myChart.getElementsAtEventForMode(event, 'nearest', { intersect: true }, true);
@@ -229,7 +233,6 @@ function agregarEventosMouse() {
         }
     });
 }
-
 
 
 //---------------------------------------------- GRAFICO ----------------------------------------------//
@@ -354,7 +357,7 @@ startButton.addEventListener('click', async () => { // Cambiado a async
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Hand Distance Detection</title>
+            <title>Mover Mano</title>
             <style>
                 body {
                     margin: 0;
@@ -437,9 +440,17 @@ startButton.addEventListener('click', async () => { // Cambiado a async
             const csvData = await cargarCSV('Datasett/juegos.csv');     
             const equipos = procesarCSV(csvData, conferencia);
             ejecucionCamara = "";
-
+            if (audioPlaying == mejorEquipo || audioPlaying == peorEquipo) {
+                if (audioPlaying) {
+                    audioPlaying.pause();  
+                    audioPlaying.currentTime = 0; 
+                    audioPlaying = null; 
+                }
+            }
+            
             crearGrafico(equipos, 0);
         }
+
     }, 500);
 });
 
@@ -452,14 +463,34 @@ window.updateDistance = async function (distacia) {
     console.log(conferencia);
     equipoContainer.innerHTML = '';  
 
-    if (distacia < 200 && ejecucionCamara != "peor") { // peor equipo
+    if (distacia < 250 && ejecucionCamara != "peor") { // peor equipo
         crearGrafico(equipos, - 1);
-        
         ejecucionCamara = "peor";
 
-    } else if (distacia > 200 && ejecucionCamara != "mejor") { // mejor equipo
+        if (audioPlaying != peorEquipo) {
+            if (audioPlaying) {
+                audioPlaying.pause();  
+                audioPlaying.currentTime = 0; 
+                audioPlaying = null; 
+            }
+            reproducirSonido(peorEquipo, 1); // Reproducir audio1 con volumen 1
+            audioPlaying = peorEquipo; // Guardar el audio actualmente en reproducción
+        }
+
+
+    } else if (distacia > 250 && ejecucionCamara != "mejor") { // mejor equipo
         crearGrafico(equipos, 1);
         ejecucionCamara = "mejor";
+
+        if (audioPlaying != mejorEquipo) {
+            if (audioPlaying) {
+                audioPlaying.pause();  
+                audioPlaying.currentTime = 0; 
+                audioPlaying = null; 
+            }
+            reproducirSonido(mejorEquipo, 1); // Reproducir audio1 con volumen 1
+            audioPlaying = mejorEquipo; // Guardar el audio actualmente en reproducción
+        }
     }
 };
 
@@ -476,7 +507,14 @@ document.getElementById('Conferencias').addEventListener('change', async (event)
     equipoContainer.innerHTML = '';  
     conferencia = selectedOption;
     ejecucionCamara = "";
-    
+    if (audioPlaying == mejorEquipo || audioPlaying == peorEquipo) {
+        if (audioPlaying) {
+            audioPlaying.pause();  
+            audioPlaying.currentTime = 0; 
+            audioPlaying = null; 
+        }
+    }
+
     crearGrafico(equipos, 0);
 });
 
